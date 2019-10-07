@@ -1,0 +1,4 @@
+Message[302] C:\USERS\CSUSER\MPLABXPROJECTS\7 SEGMENT DISPLAY.X\7SEG.ASM 7 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\CSUSER\MPLABXPROJECTS\7 SEGMENT DISPLAY.X\7SEG.ASM 10 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\CSUSER\MPLABXPROJECTS\7 SEGMENT DISPLAY.X\7SEG.ASM 13 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\7 SEGMENT DISPLAY.X\7SEG.ASM 24 : Found label after column 1. (LOOP)
