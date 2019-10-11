@@ -1,0 +1,9 @@
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 5 : Found label after column 1. (outer_delay)
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 6 : Found label after column 1. (inner_delay)
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 8 : Found label after column 1. (main)
+Message[302] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 14 : Found label after column 1. (loop)
+Message[305] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 15 : Using default destination of 1 (file).
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 20 : Found label after column 1. (delay)
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 23 : Found label after column 1. (outer_loop)
+Warning[207] C:\USERS\CSUSER\MPLABXPROJECTS\COUNTING.X\COUNTING.ASM 27 : Found label after column 1. (inner_loop)

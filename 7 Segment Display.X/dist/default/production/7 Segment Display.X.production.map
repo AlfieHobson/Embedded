@@ -1,5 +1,5 @@
 MPLINK 5.09, LINKER
-Linker Map File - Created Mon Oct 07 17:56:34 2019
+Linker Map File - Created Fri Oct 11 15:35:35 2019
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -22,13 +22,13 @@ Linker Map File - Created Mon Oct 07 17:56:34 2019
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                     LOOP   0x000008    program     static C:\Users\CSuser\MPLABXProjects\7 Segment Display.X\7Seg.asm
+                     LOOP   0x000008    program     static C:\Users\CSuser\Desktop\2nd\Embedded\7 Segment Display.X\7Seg.asm
 
 
 
                               Symbols - Sorted by Address
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                     LOOP   0x000008    program     static C:\Users\CSuser\MPLABXProjects\7 Segment Display.X\7Seg.asm
+                     LOOP   0x000008    program     static C:\Users\CSuser\Desktop\2nd\Embedded\7 Segment Display.X\7Seg.asm
 
 
