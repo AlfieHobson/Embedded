@@ -27,7 +27,7 @@
 	MOVLW   0F9H		; 1111 1001   (1)
 	MOVWF   PORTD
 	
-	MOVLW   0FEH		; 1111 1110
+	MOVLW   0FEH		; 1111 1110    Turn on 7_seg 1
 	MOVWF   PORTA
 	
 	MOVLW   0FFH

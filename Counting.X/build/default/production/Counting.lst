@@ -1,4 +1,4 @@
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  1
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -21,43 +21,89 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 Warning[207]: Found label after column 1. (outer_delay)
   000000FF            00005    outer_delay   equ   0ffh            
 Warning[207]: Found label after column 1. (inner_delay)
-  000000AF            00006    inner_delay   equ   0afh           
+  000000FF            00006    inner_delay   equ   0ffh           
                       00007                   
 Warning[207]: Found label after column 1. (main)
 0000                  00008   main 
-0000   0187           00009    clrf     PORTC
-0001   1683 1303      00010    banksel  TRISC  
+0000   0188           00009    clrf     PORTD   ;Clear Port D (HIGHS AND LOWS)
+0001   1683 1303      00010    banksel  TRISD   ;Select which ever bank TRISC belongs to. (BANK1)
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0003   0187           00011    clrf     TRISC  
-0004   0183           00012    clrf     STATUS  
-                      00013    
+0003   0188           00011    clrf     TRISD   ;Completely clear TRISD (ALL OUTPUT)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   0185           00012    clrf     TRISA   ;Turn all 7-segs on
+0005   0183           00013    clrf     STATUS  ;Clear status register (including the bank selection, so back to BANK0)
+                      00014    
+                      00015    ;Set 9 registers to our number values
+0006   30C0           00016    movlw    0C0h    ;0
+0007   00A0           00017    movwf    20h  
+0008   30F9           00018    movlw    0F9h    ;1
+0009   00A1           00019    movwf    21h
+000A   30A4           00020    movlw    0A4h    ;2
+000B   00A2           00021    movwf    22h
+000C   30B0           00022    movlw    0B0h    ;3
+000D   00A3           00023    movwf    23h
+000E   3099           00024    movlw    099h    ;4
+000F   00A4           00025    movwf    24h
+0010   3092           00026    movlw    092h    ;5
+0011   00A5           00027    movwf    25h
+0012   3082           00028    movlw    082h    ;6
+0013   00A6           00029    movwf    26h
+0014   30F8           00030    movlw    0f8h    ;7
+0015   00A7           00031    movwf    27h
+0016   3080           00032    movlw    080h    ;8
+0017   00A8           00033    movwf    28h
+0018   3098           00034    movlw    098h    ;9
+0019   00A9           00035    movwf    29h
+                      00036    
+                      00037    ;Set first address in 32h
+001A   3020           00038    MOVLW    20h
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+001B   0084           00039    MOVWF    FSR
+                      00040    
+                      00041    ; Set first 7-segment 
+001C   30FE           00042    MOVLW   0FEH         ; 1111 1110    Turn on 7_seg 1
+001D   0085           00043    MOVWF   PORTA
+                      00044    
 Warning[207]: Found label after column 1. (loop)
-0005                  00014   loop              
+001E                  00045   loop
+                      00046    ;Move register address into working register
+001E   0800           00047    MOVF   INDF,0            
+                      00048       
+                      00049    ;Move value of Working register to PORT D
+001F   0088           00050    MOVWF   PORTD 
+                      00051    
+                      00052    ;Go to next number register
 Message[305]: Using default destination of 1 (file).
-0005   0A87           00015    incf     PORTC   
-0006   2???           00016    call     delay   
-0007   2???           00017    goto     loop   
-                      00018    
-                      00019   ; Delay loops 
+0020   0A84           00053    incf     FSR
+0021   2???           00054    call     delay   ;Call Delay
+0022   2???           00055    goto     loop    ;Go round again
+                      00056    
+                      00057   ; Delay loops 
 Warning[207]: Found label after column 1. (delay)
-0008                  00020   delay 
-0008   30FF           00021    movlw    outer_delay  
-0009   00B0           00022    movwf    30h 
+0023                  00058   delay 
+0023   30FF           00059    movlw    outer_delay  
+0024   00B0           00060    movwf    30h 
 Warning[207]: Found label after column 1. (outer_loop)
-000A                  00023   outer_loop 
-                      00024   
-000A   30AF           00025    movlw    inner_delay 
-000B   00B1           00026    movwf    31h 
+0025                  00061   outer_loop 
+                      00062   
+0025   30FF           00063    movlw    inner_delay 
+0026   00B1           00064    movwf    31h 
+                      00065    
 Warning[207]: Found label after column 1. (inner_loop)
-000C                  00027   inner_loop 
-000C   0BB1           00028    decfsz   31h,1 
-000D   2???           00029    goto     inner_loop 
-                      00030    
-000E   0BB0           00031    decfsz   30h,1 
-000F   2???           00032    goto    outer_loop 
-0010   0008           00033    return  
-1832                  00034    end 
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  2
+0027                  00066   inner_loop 
+0027   0BB1           00067    decfsz   31h,1           ;Decrease value in this register, if 1, execute next line, if 0 skip.
+0028   2???           00068    goto     inner_loop 
+                      00069    
+0029   0BB0           00070    decfsz   30h,1 
+002A   2???           00071    goto    outer_loop 
+002B   0008           00072    return  
+1832                  00073    end 
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  3
 
 
 SYMBOL TABLE
@@ -116,7 +162,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  3
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  4
 
 
 SYMBOL TABLE
@@ -175,7 +221,7 @@ INTF                              00000001
 IRP                               00000007
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  4
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  5
 
 
 SYMBOL TABLE
@@ -234,7 +280,7 @@ RB0                               00000000
 RB1                               00000001
 RB2                               00000002
 RB3                               00000003
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  5
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  6
 
 
 SYMBOL TABLE
@@ -293,7 +339,7 @@ SSPBUF                            00000013
 SSPCON                            00000014
 SSPCON2                           00000091
 SSPEN                             00000005
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  6
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  7
 
 
 SYMBOL TABLE
@@ -352,7 +398,7 @@ TRISB0                            00000000
 TRISB1                            00000001
 TRISB2                            00000002
 TRISB3                            00000003
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  7
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  8
 
 
 SYMBOL TABLE
@@ -411,7 +457,7 @@ _CPD_ON                           00003EFF
 _CP_ALL                           00001FFF
 _CP_OFF                           00003FFF
 _CP_ON                            00001FFF
-MPASM 5.84                      COUNTING.ASM   10-11-2019  15:40:47         PAGE  8
+MPASM 5.84                      COUNTING.ASM   10-14-2019  17:46:52         PAGE  9
 
 
 SYMBOL TABLE
@@ -445,16 +491,16 @@ _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FFD
 __16F877A                         00000001
-delay                             00000008
-inner_delay                       000000AF
-inner_loop                        0000000C
-loop                              00000005
+delay                             00000023
+inner_delay                       000000FF
+inner_loop                        00000027
+loop                              0000001E
 main                              00000000
 outer_delay                       000000FF
-outer_loop                        0000000A
+outer_loop                        00000025
 
 Errors   :     0
 Warnings :     7 reported,     0 suppressed
-Messages :     2 reported,     0 suppressed
+Messages :     3 reported,     0 suppressed
 
 
