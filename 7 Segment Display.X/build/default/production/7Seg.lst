@@ -1,4 +1,4 @@
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  1
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -47,7 +47,7 @@ Warning[207]: Found label after column 1. (LOOP)
 0008   30F9           00027         MOVLW   0F9H            ; 1111 1001   (1)
 0009   0088           00028         MOVWF   PORTD
                       00029         
-000A   30FE           00030         MOVLW   0FEH            ; 1111 1110
+000A   30FE           00030         MOVLW   0FEH            ; 1111 1110    Turn on 7_seg 1
 000B   0085           00031         MOVWF   PORTA
                       00032         
 000C   30FF           00033         MOVLW   0FFH
@@ -57,7 +57,7 @@ Warning[207]: Found label after column 1. (LOOP)
                       00037         
 000E   30A4           00038         MOVLW   0A4H            ; 1010 0100   (2)
 000F   0088           00039         MOVWF   PORTD
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  2
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -83,7 +83,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00057         
 001A   2???           00058         GOTO LOOP               ; Enter an infinite loop
 1832                  00059         END                     ;
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  3
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  3
 
 
 SYMBOL TABLE
@@ -142,7 +142,7 @@ CHS1                              00000004
 CHS2                              00000005
 CIS                               00000003
 CKE                               00000006
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  4
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  4
 
 
 SYMBOL TABLE
@@ -201,7 +201,7 @@ INTF                              00000001
 IRP                               00000007
 LOOP                              00000008
 NOT_A                             00000005
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  5
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  5
 
 
 SYMBOL TABLE
@@ -260,7 +260,7 @@ RA5                               00000005
 RB0                               00000000
 RB1                               00000001
 RB2                               00000002
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  6
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  6
 
 
 SYMBOL TABLE
@@ -319,7 +319,7 @@ SSPADD                            00000093
 SSPBUF                            00000013
 SSPCON                            00000014
 SSPCON2                           00000091
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  7
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  7
 
 
 SYMBOL TABLE
@@ -378,7 +378,7 @@ TRISB                             00000086
 TRISB0                            00000000
 TRISB1                            00000001
 TRISB2                            00000002
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  8
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  8
 
 
 SYMBOL TABLE
@@ -437,7 +437,7 @@ _CPD_OFF                          00003FFF
 _CPD_ON                           00003EFF
 _CP_ALL                           00001FFF
 _CP_OFF                           00003FFF
-MPASM 5.84                          7SEG.ASM   10-11-2019  15:35:34         PAGE  9
+MPASM 5.84                          7SEG.ASM   10-18-2019  15:59:02         PAGE  9
 
 
 SYMBOL TABLE
