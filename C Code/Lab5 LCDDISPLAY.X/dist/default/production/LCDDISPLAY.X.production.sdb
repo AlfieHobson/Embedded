@@ -1,0 +1,79 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"21 C:\Users\CSuser\Desktop\Embedded Alfie\LCDDISPLAY.X\newmain.c
+[v _init init `(v  1 e 1 0 ]
+"29
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"39
+[v _writechar writechar `(v  1 e 1 0 ]
+"51
+[v _writecmd writecmd `(v  1 e 1 0 ]
+"63
+[v _delay delay `(v  1 e 1 0 ]
+"71
+[v _main main `(v  1 e 1 0 ]
+"340 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2659
+[v _RA1 RA1 `VEb  1 e 0 @41 ]
+"2662
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2665
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"71 C:\Users\CSuser\Desktop\Embedded Alfie\LCDDISPLAY.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"91
+} 0
+"39
+[v _writechar writechar `(v  1 e 1 0 ]
+{
+[v writechar@x x `uc  1 a 1 wreg ]
+[v writechar@x x `uc  1 a 1 wreg ]
+"41
+[v writechar@x x `uc  1 a 1 2 ]
+"47
+} 0
+"29
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"36
+} 0
+"51
+[v _writecmd writecmd `(v  1 e 1 0 ]
+{
+[v writecmd@x x `uc  1 a 1 wreg ]
+[v writecmd@x x `uc  1 a 1 wreg ]
+"53
+[v writecmd@x x `uc  1 a 1 2 ]
+"59
+} 0
+"63
+[v _delay delay `(v  1 e 1 0 ]
+{
+"65
+[v delay@i i `i  1 a 2 0 ]
+"67
+} 0
+"21
+[v _init init `(v  1 e 1 0 ]
+{
+"26
+} 0
