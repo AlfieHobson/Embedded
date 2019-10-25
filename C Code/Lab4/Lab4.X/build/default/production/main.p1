@@ -1,11 +1,26 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"1437 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1437: extern volatile unsigned char TRISC __attribute__((address(0x087)));
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"216 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "278
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"166
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+[p mainexit ]
+"2229
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2229: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+"1375
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1325
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1325: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1437
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1437: extern volatile unsigned char TRISC __attribute__((address(0x087)));
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -190,25 +205,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 3: 
 [p x FOSC = HS ]
 "4
-[; ;main.c: 4: void main () {
+[; ;main.c: 4: void checkButton (int index) {
 [p x WDTE = OFF ]
 "5
-[; ;main.c: 5: 
+[; ;main.c: 5:     if (PORTB == 1 << index) {
 [p x PWRTE = ON ]
 "6
-[; ;main.c: 6:     TRISC = 0x00;
+[; ;main.c: 6:         PORTC = 1 << index;
 [p x BOREN = OFF ]
 "7
-[; ;main.c: 7:     PORTC = 0x00;
+[; ;main.c: 7:     }
 [p x LVP = OFF ]
 "9
-[; ;main.c: 9:         for (int i=0; i<8; i++) {
+[; ;main.c: 9:         PORTC = 1 << index;
 [v _delay `(v ~T0 @X0 1 ef ]
 {
 [e :U _delay ]
 [f ]
 "10
-[; ;main.c: 10:             PORTC = 1 << i;
+[; ;main.c: 10:     }
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
@@ -220,48 +235,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 97 ]
 }
 "11
-[; ;main.c: 11:             delay();
+[; ;main.c: 11: }
 [e :UE 95 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
 "13
-[; ;main.c: 13:     }
+[; ;main.c: 13: void main () {
+[v _checkButton `(v ~T0 @X0 1 ef1`i ]
+{
+[e :U _checkButton ]
+[v _index `i ~T0 @X0 1 r1 ]
+[f ]
+"14
+[; ;main.c: 14: 
+[e $ ! == -> _PORTB `i << -> 1 `i _index 100  ]
+{
+"15
+[; ;main.c: 15:     ADCON1 = 0x07;
+[e = _PORTC -> << -> 1 `i _index `uc ]
+"16
+[; ;main.c: 16:     TRISB = 0xFF;
+}
+[e :U 100 ]
+"17
+[; ;main.c: 17:     TRISA = 0xFF;
+[e $ ! == -> _PORTA `i << -> 1 `i _index 101  ]
+{
+"18
+[; ;main.c: 18:     TRISC = 0x00;
+[e = _PORTC -> << -> 1 `i _index `uc ]
+"19
+[; ;main.c: 19:     PORTB = 0x00;
+}
+[e :U 101 ]
+"20
+[; ;main.c: 20:     PORTA = 0x00;
+[e :UE 99 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"22
+[; ;main.c: 22:     while(1){
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"15
+"24
+[; ;main.c: 24:             checkButton(i);
+[e = _ADCON1 -> -> 7 `i `uc ]
+"25
+[; ;main.c: 25:         }
+[e = _TRISB -> -> 255 `i `uc ]
+"26
+[e = _TRISA -> -> 255 `i `uc ]
+"27
 [e = _TRISC -> -> 0 `i `uc ]
-"16
-[e = _PORTC -> -> 0 `i `uc ]
-"17
+"28
+[e = _PORTB -> -> 0 `i `uc ]
+"29
+[e = _PORTA -> -> 0 `i `uc ]
+"31
+[e :U 104 ]
 {
-[e :U 100 ]
-{
-"18
+"32
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 103  ]
-[e $U 104  ]
-[e :U 103 ]
+[e $ < _i -> 8 `i 106  ]
+[e $U 107  ]
+[e :U 106 ]
 {
-"19
-[e = _PORTC -> << -> 1 `i _i `uc ]
-"20
-[e ( _delay ..  ]
-"21
+"33
+[e ( _checkButton (1 _i ]
+"34
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 103  ]
-[e :U 104 ]
+[e $ < _i -> 8 `i 106  ]
+[e :U 107 ]
 }
-"22
+"43
+[; ;main.c: 43:     }
 }
-[e $U 100  ]
-[e :U 101 ]
-}
-"49
-[; ;main.c: 49: }
-[e :UE 99 ]
+[e :U 103 ]
+[e $U 104  ]
+[e :U 105 ]
+"45
+[; ;main.c: 45: }
+[e :UE 102 ]
 }

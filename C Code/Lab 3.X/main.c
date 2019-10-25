@@ -11,14 +11,15 @@ void delay () {
 } 
 
 void main () { 
-    /* -----------------------------               Moves led down PORT C using bit shift
+    // -----------------------------               Moves led down PORT C using bit shift
     TRISC = 0x00;
+    PORTC = 0x00;
     for (;;) {
         for (int i=0; i<8; i++) {
             PORTC = 1 << i;         //Bit shift left. Moving the 00000001 to 00000010     Starts at 1. Bit shifts that 1 time, 2 time etc...
             delay(); 
         }
-    } */
+    } 
     
     /* -----------------------------                Sets all Seven segs to 1
     TRISD = 0x00;
@@ -27,9 +28,9 @@ void main () {
     
     PORTA = 0x00;
     PORTD = 0xF9;
-    */
     
-    /*------------------------------                  Displays 1,2,3 on 7-seg    */
+    
+    /*------------------------------                  Displays 1,2,3 on 7-seg    
     TRISD = 0x00;   //PORT D CONTROLS WHAT NUMBER IS DISPLAYED. Setting all as output
     TRISA = 0x00;   //PORT A CONTROLS WHICH 7 SEGMENT IS USED. Setting all as output
     ADCON1 = 0x07;  //Data sheet page 130. Makes all pins digital 
@@ -44,7 +45,7 @@ void main () {
     
     PORTD = 0xb0;   // Number 3
     PORTA = 0xfb;   // On display 3
-    PORTA = 0xff;   // Turn off displays
+    PORTA = 0xff;   // Turn off displays */
 } 
 
 /* LCD NOTES

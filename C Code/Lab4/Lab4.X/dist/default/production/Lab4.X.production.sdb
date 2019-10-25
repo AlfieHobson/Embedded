@@ -11,25 +11,34 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"9 C:\Users\CSuser\Desktop\Embedded\C Code\Lab 3.X\main.c
-[v _delay delay `(v  1 e 1 0 ]
-"13
+"13 C:\Users\CSuser\Desktop\Embedded\Lab4\Lab4.X\main.c
+[v _checkButton checkButton `(v  1 e 1 0 ]
+"22
 [v _main main `(v  1 e 1 0 ]
-"278 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+"166 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1437
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-"13 C:\Users\CSuser\Desktop\Embedded\C Code\Lab 3.X\main.c
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"22 C:\Users\CSuser\Desktop\Embedded\Lab4\Lab4.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"18
-[v main@i i `i  1 a 2 3 ]
-"49
+"32
+[v main@i i `i  1 a 2 7 ]
+"45
 } 0
-"9
-[v _delay delay `(v  1 e 1 0 ]
+"13
+[v _checkButton checkButton `(v  1 e 1 0 ]
 {
-"10
-[v delay@i i `ui  1 a 2 0 ]
-"11
+[v checkButton@index index `i  1 p 2 0 ]
+"20
 } 0

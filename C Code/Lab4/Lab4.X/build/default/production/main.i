@@ -1733,15 +1733,29 @@ void delay () {
     for (unsigned i=0; i<5000; i++);
 }
 
+void checkButton (int index) {
+    if (PORTB == 1 << index) {
+        PORTC = 1 << index;
+    }
+    if (PORTA == 1 << index) {
+        PORTC = 1 << index;
+    }
+}
+
 void main () {
 
+    ADCON1 = 0x07;
+    TRISB = 0xFF;
+    TRISA = 0xFF;
     TRISC = 0x00;
-    PORTC = 0x00;
-    for (;;) {
+    PORTB = 0x00;
+    PORTA = 0x00;
+
+    while(1){
         for (int i=0; i<8; i++) {
-            PORTC = 1 << i;
-            delay();
+            checkButton(i);
         }
+# 43 "main.c"
     }
-# 49 "main.c"
+
 }
