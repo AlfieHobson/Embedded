@@ -84,7 +84,7 @@ void main()
         */
         
         // ADDRESS OF THE SECOND LINE.
-        writecmd(0xC0);             //command is 1100 0000. Address is 100 000 = 0x40.
+        //writecmd(0xC0);             //command is 1100 0000. Address is 100 000 = 0x40.
         writechar('w');
         writechar('o');
         writechar('r');
