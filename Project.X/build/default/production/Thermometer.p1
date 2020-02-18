@@ -1,0 +1,683 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"2229 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2229: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+"1325
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1325: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1499
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"2656
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2656: extern volatile __bit RA0 __attribute__((address(0x28)));
+[v _RA0 `Vb ~T0 @X0 0 e@40 ]
+"2917
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2917: extern volatile __bit TRISA0 __attribute__((address(0x428)));
+[v _TRISA0 `Vb ~T0 @X0 0 e@1064 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
+"7 ./main.h
+[; ;./main.h: 7: struct Temp {
+[s S96 `uc 1 `uc 1 `uc 1 `i 1 ]
+[n S96 Temp tenth first dp temperature ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"2 ./main.h
+[; ;./main.h: 2: __asm("GLOBAL nosup@@$_$_" "CONFIG" "\nnosup@@$_$_" "CONFIG" " SET 0");
+[; <" GLOBAL nosup@@$_$_CONFIG ;# ">
+[; <" nosup@@$_$_CONFIG SET 0 ;# ">
+"3 Thermometer.c
+[p x FOSC = HS ]
+"4
+[p x WDTE = OFF ]
+"5
+[p x PWRTE = ON ]
+"6
+[p x BOREN = OFF ]
+"7
+[p x LVP = OFF ]
+"18
+[; ;Thermometer.c: 18:  unsigned char TLV=0 ;
+[v _TLV `uc ~T0 @X0 1 e ]
+[i _TLV
+-> -> 0 `i `uc
+]
+"19
+[; ;Thermometer.c: 19:  unsigned char THV=0;
+[v _THV `uc ~T0 @X0 1 e ]
+[i _THV
+-> -> 0 `i `uc
+]
+"20
+[; ;Thermometer.c: 20:  unsigned char TZ=0;
+[v _TZ `uc ~T0 @X0 1 e ]
+[i _TZ
+-> -> 0 `i `uc
+]
+"21
+[; ;Thermometer.c: 21:  unsigned char TX=0;
+[v _TX `uc ~T0 @X0 1 e ]
+[i _TX
+-> -> 0 `i `uc
+]
+"22
+[; ;Thermometer.c: 22:  unsigned int wd;
+[v _wd `ui ~T0 @X0 1 e ]
+"24
+[; ;Thermometer.c: 24: unsigned char tenth;
+[v _tenth `uc ~T0 @X0 1 e ]
+"25
+[; ;Thermometer.c: 25: unsigned char first;
+[v _first `uc ~T0 @X0 1 e ]
+"26
+[; ;Thermometer.c: 26: unsigned char dp;
+[v _dp `uc ~T0 @X0 1 e ]
+"30
+[; ;Thermometer.c: 30: void therm_delay(char x,char y)
+[v _therm_delay `(v ~T0 @X0 1 ef2`uc`uc ]
+"31
+[; ;Thermometer.c: 31: {
+{
+[e :U _therm_delay ]
+"30
+[; ;Thermometer.c: 30: void therm_delay(char x,char y)
+[v _x `uc ~T0 @X0 1 r1 ]
+[v _y `uc ~T0 @X0 1 r2 ]
+"31
+[; ;Thermometer.c: 31: {
+[f ]
+"32
+[; ;Thermometer.c: 32:   char z;
+[v _z `uc ~T0 @X0 1 a ]
+"33
+[; ;Thermometer.c: 33:   do{
+[e :U 102 ]
+{
+"34
+[; ;Thermometer.c: 34:       z=y;
+[e = _z _y ]
+"35
+[; ;Thermometer.c: 35:       do{;}while(--z);
+[e :U 105 ]
+{
+}
+[e $ != -> =- _z -> -> 1 `i `uc `i -> 0 `i 105  ]
+[e :U 104 ]
+"36
+[; ;Thermometer.c: 36:      }while(--x);
+}
+[e $ != -> =- _x -> -> 1 `i `uc `i -> 0 `i 102  ]
+[e :U 101 ]
+"37
+[; ;Thermometer.c: 37:  }
+[e :UE 99 ]
+}
+"46
+[; ;Thermometer.c: 46: void therm_init(void)
+[v _therm_init `(v ~T0 @X0 1 ef ]
+"47
+[; ;Thermometer.c: 47: {
+{
+[e :U _therm_init ]
+[f ]
+"48
+[; ;Thermometer.c: 48:   ADCON1=0X07;
+[e = _ADCON1 -> -> 7 `i `uc ]
+"49
+[; ;Thermometer.c: 49:   TRISA=0X00;
+[e = _TRISA -> -> 0 `i `uc ]
+"50
+[; ;Thermometer.c: 50:   TRISD=0X00;
+[e = _TRISD -> -> 0 `i `uc ]
+"51
+[; ;Thermometer.c: 51: }
+[e :UE 106 ]
+}
+"55
+[; ;Thermometer.c: 55: therm_reset(void)
+[v _therm_reset `(i ~T0 @X0 1 ef ]
+"56
+[; ;Thermometer.c: 56: {
+{
+[e :U _therm_reset ]
+[f ]
+"57
+[; ;Thermometer.c: 57:   char presence=1;
+[v _presence `uc ~T0 @X0 1 a ]
+[e = _presence -> -> 1 `i `uc ]
+"58
+[; ;Thermometer.c: 58:   while(presence)
+[e $U 108  ]
+[e :U 109 ]
+"59
+[; ;Thermometer.c: 59:   {
+{
+"60
+[; ;Thermometer.c: 60:     RA0 = 0; TRISA0 = 0 ;
+[e = _RA0 -> -> 0 `i `b ]
+[e = _TRISA0 -> -> 0 `i `b ]
+"61
+[; ;Thermometer.c: 61:     therm_delay(2,70);
+[e ( _therm_delay (2 , -> -> 2 `i `uc -> -> 70 `i `uc ]
+"62
+[; ;Thermometer.c: 62:     TRISA0 =1;
+[e = _TRISA0 -> -> 1 `i `b ]
+"63
+[; ;Thermometer.c: 63:     therm_delay(2,8);
+[e ( _therm_delay (2 , -> -> 2 `i `uc -> -> 8 `i `uc ]
+"64
+[; ;Thermometer.c: 64:     if(RA0==1) presence=1;
+[e $ ! == -> _RA0 `i -> 1 `i 111  ]
+[e = _presence -> -> 1 `i `uc ]
+[e $U 112  ]
+"65
+[; ;Thermometer.c: 65:     else presence=0;
+[e :U 111 ]
+[e = _presence -> -> 0 `i `uc ]
+[e :U 112 ]
+"66
+[; ;Thermometer.c: 66:     therm_delay(2,60);
+[e ( _therm_delay (2 , -> -> 2 `i `uc -> -> 60 `i `uc ]
+"67
+[; ;Thermometer.c: 67:    }
+}
+[e :U 108 ]
+"58
+[; ;Thermometer.c: 58:   while(presence)
+[e $ != -> _presence `i -> 0 `i 109  ]
+[e :U 110 ]
+"68
+[; ;Thermometer.c: 68:   }
+[e :UE 107 ]
+}
+"72
+[; ;Thermometer.c: 72: void therm_write_byte(unsigned char val)
+[v _therm_write_byte `(v ~T0 @X0 1 ef1`uc ]
+"73
+[; ;Thermometer.c: 73: {
+{
+[e :U _therm_write_byte ]
+"72
+[; ;Thermometer.c: 72: void therm_write_byte(unsigned char val)
+[v _val `uc ~T0 @X0 1 r1 ]
+"73
+[; ;Thermometer.c: 73: {
+[f ]
+"74
+[; ;Thermometer.c: 74:  unsigned char i;
+[v _i `uc ~T0 @X0 1 a ]
+"75
+[; ;Thermometer.c: 75:  unsigned char temp;
+[v _temp `uc ~T0 @X0 1 a ]
+"76
+[; ;Thermometer.c: 76:  for(i=8;i>0;i--)
+{
+[e = _i -> -> 8 `i `uc ]
+[e $ > -> _i `i -> 0 `i 114  ]
+[e $U 115  ]
+[e :U 114 ]
+"77
+[; ;Thermometer.c: 77:  {
+{
+"78
+[; ;Thermometer.c: 78:    temp=val&0x01;
+[e = _temp -> & -> _val `i -> 1 `i `uc ]
+"79
+[; ;Thermometer.c: 79:    RA0 = 0; TRISA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
+[e = _TRISA0 -> -> 0 `i `b ]
+"80
+[; ;Thermometer.c: 80:    __nop();
+[e ( ___nop ..  ]
+"81
+[; ;Thermometer.c: 81:    __nop();
+[e ( ___nop ..  ]
+"82
+[; ;Thermometer.c: 82:    __nop();
+[e ( ___nop ..  ]
+"83
+[; ;Thermometer.c: 83:    __nop();
+[e ( ___nop ..  ]
+"84
+[; ;Thermometer.c: 84:    __nop();
+[e ( ___nop ..  ]
+"85
+[; ;Thermometer.c: 85:    if(temp==1) TRISA0 =1;
+[e $ ! == -> _temp `i -> 1 `i 117  ]
+[e = _TRISA0 -> -> 1 `i `b ]
+[e :U 117 ]
+"86
+[; ;Thermometer.c: 86:    therm_delay(2,7);
+[e ( _therm_delay (2 , -> -> 2 `i `uc -> -> 7 `i `uc ]
+"87
+[; ;Thermometer.c: 87:    TRISA0 =1;
+[e = _TRISA0 -> -> 1 `i `b ]
+"88
+[; ;Thermometer.c: 88:    __nop();
+[e ( ___nop ..  ]
+"89
+[; ;Thermometer.c: 89:    __nop();
+[e ( ___nop ..  ]
+"90
+[; ;Thermometer.c: 90:    val=val>>1;
+[e = _val -> >> -> _val `i -> 1 `i `uc ]
+"91
+[; ;Thermometer.c: 91:   }
+}
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 114  ]
+[e :U 115 ]
+}
+"92
+[; ;Thermometer.c: 92: }
+[e :UE 113 ]
+}
+"96
+[; ;Thermometer.c: 96: unsigned char therm_read_byte(void)
+[v _therm_read_byte `(uc ~T0 @X0 1 ef ]
+"97
+[; ;Thermometer.c: 97: {
+{
+[e :U _therm_read_byte ]
+[f ]
+"98
+[; ;Thermometer.c: 98:  unsigned char i;
+[v _i `uc ~T0 @X0 1 a ]
+"99
+[; ;Thermometer.c: 99:  unsigned char value=0;
+[v _value `uc ~T0 @X0 1 a ]
+[e = _value -> -> 0 `i `uc ]
+"100
+[; ;Thermometer.c: 100:  static __bit j;
+[v F955 `b ~T0 @X0 1 s j ]
+"101
+[; ;Thermometer.c: 101:  for(i=8;i>0;i--)
+{
+[e = _i -> -> 8 `i `uc ]
+[e $ > -> _i `i -> 0 `i 119  ]
+[e $U 120  ]
+[e :U 119 ]
+"102
+[; ;Thermometer.c: 102:  {
+{
+"103
+[; ;Thermometer.c: 103:    value>>=1;
+[e =>> _value -> -> 1 `i `uc ]
+"104
+[; ;Thermometer.c: 104:    RA0 = 0; TRISA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
+[e = _TRISA0 -> -> 0 `i `b ]
+"105
+[; ;Thermometer.c: 105:    __nop();
+[e ( ___nop ..  ]
+"106
+[; ;Thermometer.c: 106:    __nop();
+[e ( ___nop ..  ]
+"107
+[; ;Thermometer.c: 107:    __nop();
+[e ( ___nop ..  ]
+"108
+[; ;Thermometer.c: 108:    __nop();
+[e ( ___nop ..  ]
+"109
+[; ;Thermometer.c: 109:    __nop();
+[e ( ___nop ..  ]
+"110
+[; ;Thermometer.c: 110:    __nop();
+[e ( ___nop ..  ]
+"111
+[; ;Thermometer.c: 111:    TRISA0 =1;
+[e = _TRISA0 -> -> 1 `i `b ]
+"112
+[; ;Thermometer.c: 112:    __nop();
+[e ( ___nop ..  ]
+"113
+[; ;Thermometer.c: 113:    __nop();
+[e ( ___nop ..  ]
+"114
+[; ;Thermometer.c: 114:    __nop();
+[e ( ___nop ..  ]
+"115
+[; ;Thermometer.c: 115:    __nop();
+[e ( ___nop ..  ]
+"116
+[; ;Thermometer.c: 116:    __nop();
+[e ( ___nop ..  ]
+"117
+[; ;Thermometer.c: 117:    j=RA0;
+[e = F955 _RA0 ]
+"118
+[; ;Thermometer.c: 118:    if(j) value|=0x80;
+[e $ ! F955 122  ]
+[e =| _value -> -> 128 `i `uc ]
+[e :U 122 ]
+"119
+[; ;Thermometer.c: 119:    therm_delay(2,7);
+[e ( _therm_delay (2 , -> -> 2 `i `uc -> -> 7 `i `uc ]
+"120
+[; ;Thermometer.c: 120:   }
+}
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 119  ]
+[e :U 120 ]
+}
+"121
+[; ;Thermometer.c: 121:   return(value);
+[e ) _value ]
+[e $UE 118  ]
+"122
+[; ;Thermometer.c: 122: }
+[e :UE 118 ]
+}
+"126
+[; ;Thermometer.c: 126: void therm_get_temp(void)
+[v _therm_get_temp `(v ~T0 @X0 1 ef ]
+"127
+[; ;Thermometer.c: 127: {
+{
+[e :U _therm_get_temp ]
+[f ]
+"128
+[; ;Thermometer.c: 128: int i;
+[v _i `i ~T0 @X0 1 a ]
+"129
+[; ;Thermometer.c: 129: TRISA0 =1;
+[e = _TRISA0 -> -> 1 `i `b ]
+"130
+[; ;Thermometer.c: 130: therm_reset();
+[e ( _therm_reset ..  ]
+"131
+[; ;Thermometer.c: 131: therm_write_byte(0XCC);
+[e ( _therm_write_byte (1 -> -> 204 `i `uc ]
+"132
+[; ;Thermometer.c: 132: therm_write_byte(0X44);
+[e ( _therm_write_byte (1 -> -> 68 `i `uc ]
+"134
+[; ;Thermometer.c: 134: therm_reset();
+[e ( _therm_reset ..  ]
+"135
+[; ;Thermometer.c: 135: therm_write_byte(0XCC);
+[e ( _therm_write_byte (1 -> -> 204 `i `uc ]
+"136
+[; ;Thermometer.c: 136: therm_write_byte(0XBE);
+[e ( _therm_write_byte (1 -> -> 190 `i `uc ]
+"137
+[; ;Thermometer.c: 137: TLV=therm_read_byte();
+[e = _TLV ( _therm_read_byte ..  ]
+"138
+[; ;Thermometer.c: 138: THV=therm_read_byte();
+[e = _THV ( _therm_read_byte ..  ]
+"139
+[; ;Thermometer.c: 139: TRISA0 =1;
+[e = _TRISA0 -> -> 1 `i `b ]
+"140
+[; ;Thermometer.c: 140: TZ=(TLV>>4)|(THV<<4)&0X3f;
+[e = _TZ -> | >> -> _TLV `i -> 4 `i & << -> _THV `i -> 4 `i -> 63 `i `uc ]
+"141
+[; ;Thermometer.c: 141: TX=TLV<<4;
+[e = _TX -> << -> _TLV `i -> 4 `i `uc ]
+"142
+[; ;Thermometer.c: 142: if(TZ>100) TZ/100;
+[e $ ! > -> _TZ `i -> 100 `i 124  ]
+[e / -> _TZ `i -> 100 `i ]
+[e :U 124 ]
+"143
+[; ;Thermometer.c: 143: first=TZ%10;
+[e = _first -> % -> _TZ `i -> 10 `i `uc ]
+"144
+[; ;Thermometer.c: 144: tenth=TZ/10;
+[e = _tenth -> / -> _TZ `i -> 10 `i `uc ]
+"145
+[; ;Thermometer.c: 145: wd=0;
+[e = _wd -> -> 0 `i `ui ]
+"146
+[; ;Thermometer.c: 146: if (TX & 0x80) wd=wd+5000;
+[e $ ! != & -> _TX `i -> 128 `i -> 0 `i 125  ]
+[e = _wd + _wd -> -> 5000 `i `ui ]
+[e :U 125 ]
+"147
+[; ;Thermometer.c: 147: if (TX & 0x40) wd=wd+2500;
+[e $ ! != & -> _TX `i -> 64 `i -> 0 `i 126  ]
+[e = _wd + _wd -> -> 2500 `i `ui ]
+[e :U 126 ]
+"148
+[; ;Thermometer.c: 148: if (TX & 0x20) wd=wd+1250;
+[e $ ! != & -> _TX `i -> 32 `i -> 0 `i 127  ]
+[e = _wd + _wd -> -> 1250 `i `ui ]
+[e :U 127 ]
+"149
+[; ;Thermometer.c: 149: if (TX & 0x10) wd=wd+625;
+[e $ ! != & -> _TX `i -> 16 `i -> 0 `i 128  ]
+[e = _wd + _wd -> -> 625 `i `ui ]
+[e :U 128 ]
+"150
+[; ;Thermometer.c: 150: dp=wd/1000;
+[e = _dp -> / _wd -> -> 1000 `i `ui `uc ]
+"151
+[; ;Thermometer.c: 151: __nop();
+[e ( ___nop ..  ]
+"152
+[; ;Thermometer.c: 152: }
+[e :UE 123 ]
+}
+"156
+[; ;Thermometer.c: 156: struct Temp therm_getTemp(void)
+[v _therm_getTemp `(S96 ~T0 @X0 1 ef ]
+"157
+[; ;Thermometer.c: 157: {
+{
+[e :U _therm_getTemp ]
+[f ]
+"158
+[; ;Thermometer.c: 158:     therm_init();
+[e ( _therm_init ..  ]
+"159
+[; ;Thermometer.c: 159:     therm_get_temp();
+[e ( _therm_get_temp ..  ]
+"162
+[; ;Thermometer.c: 162:     int mergeTemp = (tenth*100) + (first*10) + dp;
+[v _mergeTemp `i ~T0 @X0 1 a ]
+[e = _mergeTemp + + * -> _tenth `i -> 100 `i * -> _first `i -> 10 `i -> _dp `i ]
+[v F960 `S96 ~T0 @X0 1 s ]
+[i F960
+:U ..
+:U ..
+"164
+[; ;Thermometer.c: 164:     struct Temp t = { tenth, first, dp , mergeTemp};
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> 0 `i
+..
+..
+]
+[v _t `S96 ~T0 @X0 1 a ]
+[e = _t F960 ]
+[e ; = . _t 0 -> _tenth `uc ; = . _t 1 -> _first `uc ; = . _t 2 -> _dp `uc = . _t 3 _mergeTemp ]
+"165
+[; ;Thermometer.c: 165:     return t;
+[e ) _t ]
+[e $UE 129  ]
+"167
+[; ;Thermometer.c: 167: }
+[e :UE 129 ]
+}

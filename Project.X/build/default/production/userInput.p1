@@ -1,0 +1,1907 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"14 ./main.h
+[; ;./main.h: 14: struct Time {
+[s S97 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `i 1 ]
+[n S97 Time sec1 sec2 min1 min2 hour1 hour2 day1 day2 month1 month2 week1 week2 year1 year2 valid ]
+"9 userInput.c
+[; ;userInput.c: 9: void userInput_displayDate (struct Time date);
+[v _userInput_displayDate `(v ~T0 @X0 0 ef1`S97 ]
+"2 ./LCD.h
+[; ;./LCD.h: 2: void LCD_writeCmd(char x);
+[v _LCD_writeCmd `(v ~T0 @X0 0 ef1`uc ]
+"1 ./buttonMatrix.h
+[; ;./buttonMatrix.h: 1: int matrix_checkButtons(void);
+[v _matrix_checkButtons `(i ~T0 @X0 0 ef ]
+"8 userInput.c
+[; ;userInput.c: 8: void userInput_displayTime(struct Time time);
+[v _userInput_displayTime `(v ~T0 @X0 0 ef1`S97 ]
+"32 ./main.h
+[; ;./main.h: 32: struct Limits {
+[s S98 `i 1 `i 1 `i 1 `i 1 ]
+[n S98 Limits lowLimit low high highLimit ]
+"7 userInput.c
+[; ;userInput.c: 7: void userInput_displayLimits(struct Limits limits, int day);
+[v _userInput_displayLimits `(v ~T0 @X0 0 ef2`S98`i ]
+"1 ./LCD.h
+[; ;./LCD.h: 1: void LCD_init(void);
+[v _LCD_init `(v ~T0 @X0 0 ef ]
+"5
+[; ;./LCD.h: 5: void LCD_clear(void);
+[v _LCD_clear `(v ~T0 @X0 0 ef ]
+"4
+[; ;./LCD.h: 4: void LCD_write(char string[],char len);
+[v _LCD_write `(v ~T0 @X0 0 ef2`*uc`uc ]
+"7
+[; ;./LCD.h: 7: void LCD_secondLine(void);
+[v _LCD_secondLine `(v ~T0 @X0 0 ef ]
+"3
+[; ;./LCD.h: 3: void LCD_writeChar(char x);
+[v _LCD_writeChar `(v ~T0 @X0 0 ef1`uc ]
+"9
+[; ;./LCD.h: 9: void LCD_fourthLine(void);
+[v _LCD_fourthLine `(v ~T0 @X0 0 ef ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"2 ./main.h
+[; ;./main.h: 2: __asm("GLOBAL nosup@@$_$_" "CONFIG" "\nnosup@@$_$_" "CONFIG" " SET 0");
+[; <" GLOBAL nosup@@$_$_CONFIG ;# ">
+[; <" nosup@@$_$_CONFIG SET 0 ;# ">
+"34 userInput.c
+[; ;userInput.c: 34: int daysInMonth[] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+[v _daysInMonth `i ~T0 @X0 -> 12 `i e ]
+[i _daysInMonth
+:U ..
+-> 31 `i
+-> 29 `i
+-> 31 `i
+-> 30 `i
+-> 31 `i
+-> 30 `i
+-> 31 `i
+-> 31 `i
+-> 30 `i
+-> 31 `i
+-> 30 `i
+-> 31 `i
+..
+]
+"36
+[; ;userInput.c: 36: struct Time userInput_getDate(struct Time date)
+[v _userInput_getDate `(S97 ~T0 @X0 1 ef1`S97 ]
+"37
+[; ;userInput.c: 37: {
+{
+[e :U _userInput_getDate ]
+"36
+[; ;userInput.c: 36: struct Time userInput_getDate(struct Time date)
+[v _date `S97 ~T0 @X0 1 r1 ]
+"37
+[; ;userInput.c: 37: {
+[f ]
+"38
+[; ;userInput.c: 38:     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"41
+[; ;userInput.c: 41:     LCD_writeCmd(0x84);
+[e ( _LCD_writeCmd (1 -> -> 132 `i `uc ]
+"43
+[; ;userInput.c: 43:     int dateAddressCounter = 0;
+[v _dateAddressCounter `i ~T0 @X0 1 a ]
+[e = _dateAddressCounter -> 0 `i ]
+"44
+[; ;userInput.c: 44:     _Bool buttonPress = 0;
+[v _buttonPress `a ~T0 @X0 1 a ]
+[e = _buttonPress -> -> 0 `i `a ]
+"45
+[; ;userInput.c: 45:     _Bool increment = 0;
+[v _increment `a ~T0 @X0 1 a ]
+[e = _increment -> -> 0 `i `a ]
+"46
+[; ;userInput.c: 46:     _Bool decrement = 0;
+[v _decrement `a ~T0 @X0 1 a ]
+[e = _decrement -> -> 0 `i `a ]
+"51
+[; ;userInput.c: 51:     while (1)
+[e :U 101 ]
+"52
+[; ;userInput.c: 52:     {
+{
+"53
+[; ;userInput.c: 53:         int button = matrix_checkButtons();
+[v _button `i ~T0 @X0 1 a ]
+[e = _button ( _matrix_checkButtons ..  ]
+"54
+[; ;userInput.c: 54:         switch (button)
+[e $U 104  ]
+"55
+[; ;userInput.c: 55:         {
+{
+"56
+[; ;userInput.c: 56:             case 0:
+[e :U 105 ]
+"57
+[; ;userInput.c: 57:                 buttonPress = 0;
+[e = _buttonPress -> -> 0 `i `a ]
+"58
+[; ;userInput.c: 58:                 break;
+[e $U 103  ]
+"59
+[; ;userInput.c: 59:             case 2:
+[e :U 106 ]
+"62
+[; ;userInput.c: 62:                 if (!buttonPress && dateAddressCounter != 0) dateAddressCounter--;
+[e $ ! && ! != -> _buttonPress `i -> 0 `i != _dateAddressCounter -> 0 `i 107  ]
+[e -- _dateAddressCounter -> 1 `i ]
+[e :U 107 ]
+"63
+[; ;userInput.c: 63:                 buttonPress = 1;
+[e = _buttonPress -> -> 1 `i `a ]
+"64
+[; ;userInput.c: 64:                 break;
+[e $U 103  ]
+"65
+[; ;userInput.c: 65:             case 5:
+[e :U 108 ]
+"66
+[; ;userInput.c: 66:                 if (!buttonPress) decrement = 1;
+[e $ ! ! != -> _buttonPress `i -> 0 `i 109  ]
+[e = _decrement -> -> 1 `i `a ]
+[e :U 109 ]
+"67
+[; ;userInput.c: 67:                 break;
+[e $U 103  ]
+"68
+[; ;userInput.c: 68:             case 7:
+[e :U 110 ]
+"69
+[; ;userInput.c: 69:                 if (!buttonPress) increment = 1;
+[e $ ! ! != -> _buttonPress `i -> 0 `i 111  ]
+[e = _increment -> -> 1 `i `a ]
+[e :U 111 ]
+"70
+[; ;userInput.c: 70:                 break;
+[e $U 103  ]
+"71
+[; ;userInput.c: 71:             case 10:
+[e :U 112 ]
+"74
+[; ;userInput.c: 74:                 if (!buttonPress && dateAddressCounter != 3) dateAddressCounter++;
+[e $ ! && ! != -> _buttonPress `i -> 0 `i != _dateAddressCounter -> 3 `i 113  ]
+[e ++ _dateAddressCounter -> 1 `i ]
+[e :U 113 ]
+"75
+[; ;userInput.c: 75:                 buttonPress = 1;
+[e = _buttonPress -> -> 1 `i `a ]
+"76
+[; ;userInput.c: 76:                 break;
+[e $U 103  ]
+"78
+[; ;userInput.c: 78:             case 13:
+[e :U 114 ]
+"79
+[; ;userInput.c: 79:                 date.valid = 0;
+[e = . _date 14 -> 0 `i ]
+"80
+[; ;userInput.c: 80:                 return date;
+[e ) _date ]
+[e $UE 99  ]
+"81
+[; ;userInput.c: 81:                 break;
+[e $U 103  ]
+"82
+[; ;userInput.c: 82:             case 16:
+[e :U 115 ]
+"83
+[; ;userInput.c: 83:                 date.valid = 1;
+[e = . _date 14 -> 1 `i ]
+"84
+[; ;userInput.c: 84:                 return date;
+[e ) _date ]
+[e $UE 99  ]
+"85
+[; ;userInput.c: 85:                 break;
+[e $U 103  ]
+"86
+[; ;userInput.c: 86:         }
+}
+[e $U 103  ]
+[e :U 104 ]
+[e [\ _button , $ -> 0 `i 105
+ , $ -> 2 `i 106
+ , $ -> 5 `i 108
+ , $ -> 7 `i 110
+ , $ -> 10 `i 112
+ , $ -> 13 `i 114
+ , $ -> 16 `i 115
+ 103 ]
+[e :U 103 ]
+"88
+[; ;userInput.c: 88:         int month = ((date.month1)*10) + (date.month2) -1;
+[v _month `i ~T0 @X0 1 a ]
+[e = _month - + * -> . _date 8 `i -> 10 `i -> . _date 9 `i -> 1 `i ]
+"89
+[; ;userInput.c: 89:         int dayLimit = daysInMonth[month];
+[v _dayLimit `i ~T0 @X0 1 a ]
+[e = _dayLimit *U + &U _daysInMonth * -> -> _month `ui `ux -> -> # *U &U _daysInMonth `ui `ux ]
+"94
+[; ;userInput.c: 94:         switch (dateAddressCounter)
+[e $U 117  ]
+"95
+[; ;userInput.c: 95:         {
+{
+"96
+[; ;userInput.c: 96:             int day;
+[v _day `i ~T0 @X0 1 a ]
+"98
+[; ;userInput.c: 98:             case 0:
+[e :U 118 ]
+"99
+[; ;userInput.c: 99:                 LCD_writeCmd(0x82);
+[e ( _LCD_writeCmd (1 -> -> 130 `i `uc ]
+"102
+[; ;userInput.c: 102:                 day = ((date.day1)*10) + (date.day2);
+[e = _day + * -> . _date 6 `i -> 10 `i -> . _date 7 `i ]
+"104
+[; ;userInput.c: 104:                 if (increment == 1)
+[e $ ! == -> _increment `i -> 1 `i 119  ]
+"105
+[; ;userInput.c: 105:                 {
+{
+"107
+[; ;userInput.c: 107:                     if (day >= dayLimit) day = 1;
+[e $ ! >= _day _dayLimit 120  ]
+[e = _day -> 1 `i ]
+[e $U 121  ]
+"108
+[; ;userInput.c: 108:                     else day ++;
+[e :U 120 ]
+[e ++ _day -> 1 `i ]
+[e :U 121 ]
+"111
+[; ;userInput.c: 111:                     date.day1 = (day / 10) % 10;
+[e = . _date 6 -> % / _day -> 10 `i -> 10 `i `uc ]
+"112
+[; ;userInput.c: 112:                     date.day2 = (day % 10);
+[e = . _date 7 -> % _day -> 10 `i `uc ]
+"114
+[; ;userInput.c: 114:                     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"115
+[; ;userInput.c: 115:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"116
+[; ;userInput.c: 116:                 }
+}
+[e $U 122  ]
+"117
+[; ;userInput.c: 117:                 else if (decrement == 1) {
+[e :U 119 ]
+[e $ ! == -> _decrement `i -> 1 `i 123  ]
+{
+"118
+[; ;userInput.c: 118:                     if (day == 0) day = dayLimit;
+[e $ ! == _day -> 0 `i 124  ]
+[e = _day _dayLimit ]
+[e $U 125  ]
+"119
+[; ;userInput.c: 119:                     else day --;
+[e :U 124 ]
+[e -- _day -> 1 `i ]
+[e :U 125 ]
+"122
+[; ;userInput.c: 122:                     date.day1 = (day / 10) % 10;
+[e = . _date 6 -> % / _day -> 10 `i -> 10 `i `uc ]
+"123
+[; ;userInput.c: 123:                     date.day2 = (day % 10);
+[e = . _date 7 -> % _day -> 10 `i `uc ]
+"125
+[; ;userInput.c: 125:                     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"126
+[; ;userInput.c: 126:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"127
+[; ;userInput.c: 127:                 }
+}
+[e :U 123 ]
+[e :U 122 ]
+"128
+[; ;userInput.c: 128:                 break;
+[e $U 116  ]
+"131
+[; ;userInput.c: 131:             case 1:
+[e :U 126 ]
+"132
+[; ;userInput.c: 132:                 LCD_writeCmd(0x83);
+[e ( _LCD_writeCmd (1 -> -> 131 `i `uc ]
+"135
+[; ;userInput.c: 135:                 int month = ((date.month1)*10) + (date.month2);
+[v _month `i ~T0 @X0 1 a ]
+[e = _month + * -> . _date 8 `i -> 10 `i -> . _date 9 `i ]
+"136
+[; ;userInput.c: 136:                 day = ((date.day1)*10) + (date.day2);
+[e = _day + * -> . _date 6 `i -> 10 `i -> . _date 7 `i ]
+"138
+[; ;userInput.c: 138:                 if (increment == 1)
+[e $ ! == -> _increment `i -> 1 `i 127  ]
+"139
+[; ;userInput.c: 139:                 {
+{
+"141
+[; ;userInput.c: 141:                     if (month == 12) month = 1;
+[e $ ! == _month -> 12 `i 128  ]
+[e = _month -> 1 `i ]
+[e $U 129  ]
+"142
+[; ;userInput.c: 142:                     else month ++;
+[e :U 128 ]
+[e ++ _month -> 1 `i ]
+[e :U 129 ]
+"145
+[; ;userInput.c: 145:                     date.month1 = (month / 10) % 10;
+[e = . _date 8 -> % / _month -> 10 `i -> 10 `i `uc ]
+"146
+[; ;userInput.c: 146:                     date.month2 = (month % 10);
+[e = . _date 9 -> % _month -> 10 `i `uc ]
+"149
+[; ;userInput.c: 149:                     if (day > daysInMonth[month-1] )
+[e $ ! > _day *U + &U _daysInMonth * -> -> - _month -> 1 `i `ui `ux -> -> # *U &U _daysInMonth `ui `ux 130  ]
+"150
+[; ;userInput.c: 150:                     {
+{
+"151
+[; ;userInput.c: 151:                         day = daysInMonth[month-1];
+[e = _day *U + &U _daysInMonth * -> -> - _month -> 1 `i `ui `ux -> -> # *U &U _daysInMonth `ui `ux ]
+"152
+[; ;userInput.c: 152:                         date.day1 = (day / 10) % 10;
+[e = . _date 6 -> % / _day -> 10 `i -> 10 `i `uc ]
+"153
+[; ;userInput.c: 153:                         date.day2 = (day % 10);
+[e = . _date 7 -> % _day -> 10 `i `uc ]
+"154
+[; ;userInput.c: 154:                     }
+}
+[e :U 130 ]
+"155
+[; ;userInput.c: 155:                     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"156
+[; ;userInput.c: 156:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"157
+[; ;userInput.c: 157:                 }
+}
+[e :U 127 ]
+"158
+[; ;userInput.c: 158:                 if (decrement == 1)
+[e $ ! == -> _decrement `i -> 1 `i 131  ]
+"159
+[; ;userInput.c: 159:                 {
+{
+"161
+[; ;userInput.c: 161:                     if (month == 1) month = 12;
+[e $ ! == _month -> 1 `i 132  ]
+[e = _month -> 12 `i ]
+[e $U 133  ]
+"162
+[; ;userInput.c: 162:                     else month --;
+[e :U 132 ]
+[e -- _month -> 1 `i ]
+[e :U 133 ]
+"165
+[; ;userInput.c: 165:                     date.month1 = (month / 10) % 10;
+[e = . _date 8 -> % / _month -> 10 `i -> 10 `i `uc ]
+"166
+[; ;userInput.c: 166:                     date.month2 = (month % 10);
+[e = . _date 9 -> % _month -> 10 `i `uc ]
+"169
+[; ;userInput.c: 169:                     if (day > daysInMonth[month-1] )
+[e $ ! > _day *U + &U _daysInMonth * -> -> - _month -> 1 `i `ui `ux -> -> # *U &U _daysInMonth `ui `ux 134  ]
+"170
+[; ;userInput.c: 170:                     {
+{
+"171
+[; ;userInput.c: 171:                         day = daysInMonth[month-1];
+[e = _day *U + &U _daysInMonth * -> -> - _month -> 1 `i `ui `ux -> -> # *U &U _daysInMonth `ui `ux ]
+"172
+[; ;userInput.c: 172:                         date.day1 = (day / 10) % 10;
+[e = . _date 6 -> % / _day -> 10 `i -> 10 `i `uc ]
+"173
+[; ;userInput.c: 173:                         date.day2 = (day % 10);
+[e = . _date 7 -> % _day -> 10 `i `uc ]
+"174
+[; ;userInput.c: 174:                     }
+}
+[e :U 134 ]
+"176
+[; ;userInput.c: 176:                     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"177
+[; ;userInput.c: 177:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"178
+[; ;userInput.c: 178:                 }
+}
+[e :U 131 ]
+"179
+[; ;userInput.c: 179:                 break;
+[e $U 116  ]
+"182
+[; ;userInput.c: 182:             case 2:
+[e :U 135 ]
+"183
+[; ;userInput.c: 183:                 LCD_writeCmd(0x85);
+[e ( _LCD_writeCmd (1 -> -> 133 `i `uc ]
+"186
+[; ;userInput.c: 186:                 int year = ((date.year1)*10) + (date.year2);
+[v _year `i ~T0 @X0 1 a ]
+[e = _year + * -> . _date 12 `i -> 10 `i -> . _date 13 `i ]
+"187
+[; ;userInput.c: 187:                 if (increment == 1)
+[e $ ! == -> _increment `i -> 1 `i 136  ]
+"188
+[; ;userInput.c: 188:                 {
+{
+"190
+[; ;userInput.c: 190:                     if (year == 99) year = 0;
+[e $ ! == _year -> 99 `i 137  ]
+[e = _year -> 0 `i ]
+[e $U 138  ]
+"191
+[; ;userInput.c: 191:                     else year ++;
+[e :U 137 ]
+[e ++ _year -> 1 `i ]
+[e :U 138 ]
+"195
+[; ;userInput.c: 195:                     date.year1 = (year / 10) % 10;
+[e = . _date 12 -> % / _year -> 10 `i -> 10 `i `uc ]
+"196
+[; ;userInput.c: 196:                     date.year2 = (year % 10);
+[e = . _date 13 -> % _year -> 10 `i `uc ]
+"198
+[; ;userInput.c: 198:                     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"199
+[; ;userInput.c: 199:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"200
+[; ;userInput.c: 200:                 }
+}
+[e :U 136 ]
+"201
+[; ;userInput.c: 201:                 if (decrement == 1)
+[e $ ! == -> _decrement `i -> 1 `i 139  ]
+"202
+[; ;userInput.c: 202:                 {
+{
+"204
+[; ;userInput.c: 204:                     if (year == 0) year = 99;
+[e $ ! == _year -> 0 `i 140  ]
+[e = _year -> 99 `i ]
+[e $U 141  ]
+"205
+[; ;userInput.c: 205:                     else year --;
+[e :U 140 ]
+[e -- _year -> 1 `i ]
+[e :U 141 ]
+"208
+[; ;userInput.c: 208:                     date.year1 = (year / 10) % 10;
+[e = . _date 12 -> % / _year -> 10 `i -> 10 `i `uc ]
+"209
+[; ;userInput.c: 209:                     date.year2 = (year % 10);
+[e = . _date 13 -> % _year -> 10 `i `uc ]
+"211
+[; ;userInput.c: 211:                     userInput_displayDate(date);
+[e ( _userInput_displayDate (1 _date ]
+"212
+[; ;userInput.c: 212:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"213
+[; ;userInput.c: 213:                 }
+}
+[e :U 139 ]
+"214
+[; ;userInput.c: 214:                 break;
+[e $U 116  ]
+"215
+[; ;userInput.c: 215:         }
+}
+[e $U 116  ]
+[e :U 117 ]
+[e [\ _dateAddressCounter , $ -> 0 `i 118
+ , $ -> 1 `i 126
+ , $ -> 2 `i 135
+ 116 ]
+[e :U 116 ]
+"217
+[; ;userInput.c: 217:     }
+}
+[e :U 100 ]
+[e $U 101  ]
+[e :U 102 ]
+"219
+[; ;userInput.c: 219: }
+[e :UE 99 ]
+}
+"222
+[; ;userInput.c: 222: struct Time userInput_getTime(struct Time time) {
+[v _userInput_getTime `(S97 ~T0 @X0 1 ef1`S97 ]
+{
+[e :U _userInput_getTime ]
+[v _time `S97 ~T0 @X0 1 r1 ]
+[f ]
+"224
+[; ;userInput.c: 224:     userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"227
+[; ;userInput.c: 227:     LCD_writeCmd(0x82);
+[e ( _LCD_writeCmd (1 -> -> 130 `i `uc ]
+"229
+[; ;userInput.c: 229:     int timeAddressCounter = 0;
+[v _timeAddressCounter `i ~T0 @X0 1 a ]
+[e = _timeAddressCounter -> 0 `i ]
+"230
+[; ;userInput.c: 230:     _Bool buttonPress = 0;
+[v _buttonPress `a ~T0 @X0 1 a ]
+[e = _buttonPress -> -> 0 `i `a ]
+"231
+[; ;userInput.c: 231:     _Bool increment = 0;
+[v _increment `a ~T0 @X0 1 a ]
+[e = _increment -> -> 0 `i `a ]
+"232
+[; ;userInput.c: 232:     _Bool decrement = 0;
+[v _decrement `a ~T0 @X0 1 a ]
+[e = _decrement -> -> 0 `i `a ]
+"233
+[; ;userInput.c: 233:     int exit = 0;
+[v _exit `i ~T0 @X0 1 a ]
+[e = _exit -> 0 `i ]
+"239
+[; ;userInput.c: 239:     while (1)
+[e :U 144 ]
+"240
+[; ;userInput.c: 240:     {
+{
+"241
+[; ;userInput.c: 241:         int button = matrix_checkButtons();
+[v _button `i ~T0 @X0 1 a ]
+[e = _button ( _matrix_checkButtons ..  ]
+"242
+[; ;userInput.c: 242:         switch (button) {
+[e $U 147  ]
+{
+"243
+[; ;userInput.c: 243:             case 0:
+[e :U 148 ]
+"244
+[; ;userInput.c: 244:                 buttonPress = 0;
+[e = _buttonPress -> -> 0 `i `a ]
+"245
+[; ;userInput.c: 245:                 break;
+[e $U 146  ]
+"246
+[; ;userInput.c: 246:             case 2:
+[e :U 149 ]
+"248
+[; ;userInput.c: 248:                 if (!buttonPress && timeAddressCounter != 0) timeAddressCounter--;
+[e $ ! && ! != -> _buttonPress `i -> 0 `i != _timeAddressCounter -> 0 `i 150  ]
+[e -- _timeAddressCounter -> 1 `i ]
+[e :U 150 ]
+"249
+[; ;userInput.c: 249:                 buttonPress = 1;
+[e = _buttonPress -> -> 1 `i `a ]
+"250
+[; ;userInput.c: 250:                 break;
+[e $U 146  ]
+"251
+[; ;userInput.c: 251:             case 5:
+[e :U 151 ]
+"252
+[; ;userInput.c: 252:                 if (!buttonPress) decrement = 1;
+[e $ ! ! != -> _buttonPress `i -> 0 `i 152  ]
+[e = _decrement -> -> 1 `i `a ]
+[e :U 152 ]
+"253
+[; ;userInput.c: 253:                 break;
+[e $U 146  ]
+"254
+[; ;userInput.c: 254:             case 7:
+[e :U 153 ]
+"255
+[; ;userInput.c: 255:                 if (!buttonPress) increment = 1;
+[e $ ! ! != -> _buttonPress `i -> 0 `i 154  ]
+[e = _increment -> -> 1 `i `a ]
+[e :U 154 ]
+"256
+[; ;userInput.c: 256:                 break;
+[e $U 146  ]
+"257
+[; ;userInput.c: 257:             case 10:
+[e :U 155 ]
+"259
+[; ;userInput.c: 259:                 if (!buttonPress && timeAddressCounter != 3) timeAddressCounter++;
+[e $ ! && ! != -> _buttonPress `i -> 0 `i != _timeAddressCounter -> 3 `i 156  ]
+[e ++ _timeAddressCounter -> 1 `i ]
+[e :U 156 ]
+"260
+[; ;userInput.c: 260:                 buttonPress = 1;
+[e = _buttonPress -> -> 1 `i `a ]
+"261
+[; ;userInput.c: 261:                 break;
+[e $U 146  ]
+"262
+[; ;userInput.c: 262:             case 13:
+[e :U 157 ]
+"263
+[; ;userInput.c: 263:                 time.valid = 0;
+[e = . _time 14 -> 0 `i ]
+"264
+[; ;userInput.c: 264:                 return time;
+[e ) _time ]
+[e $UE 142  ]
+"265
+[; ;userInput.c: 265:                 break;
+[e $U 146  ]
+"266
+[; ;userInput.c: 266:             case 16:
+[e :U 158 ]
+"267
+[; ;userInput.c: 267:                 time.valid = 1;
+[e = . _time 14 -> 1 `i ]
+"268
+[; ;userInput.c: 268:                 return time;
+[e ) _time ]
+[e $UE 142  ]
+"269
+[; ;userInput.c: 269:                 break;
+[e $U 146  ]
+"270
+[; ;userInput.c: 270:         }
+}
+[e $U 146  ]
+[e :U 147 ]
+[e [\ _button , $ -> 0 `i 148
+ , $ -> 2 `i 149
+ , $ -> 5 `i 151
+ , $ -> 7 `i 153
+ , $ -> 10 `i 155
+ , $ -> 13 `i 157
+ , $ -> 16 `i 158
+ 146 ]
+[e :U 146 ]
+"272
+[; ;userInput.c: 272:         switch (timeAddressCounter) {
+[e $U 160  ]
+{
+"274
+[; ;userInput.c: 274:             case 0:
+[e :U 161 ]
+"275
+[; ;userInput.c: 275:                 LCD_writeCmd(0x82);
+[e ( _LCD_writeCmd (1 -> -> 130 `i `uc ]
+"276
+[; ;userInput.c: 276:                 if (increment == 1)
+[e $ ! == -> _increment `i -> 1 `i 162  ]
+"277
+[; ;userInput.c: 277:                 {
+{
+"278
+[; ;userInput.c: 278:                     if (time.hour2 == 0x09)
+[e $ ! == -> . _time 5 `i -> 9 `i 163  ]
+"279
+[; ;userInput.c: 279:                     {
+{
+"280
+[; ;userInput.c: 280:                         time.hour1++;
+[e ++ . _time 4 -> -> 1 `i `uc ]
+"281
+[; ;userInput.c: 281:                         time.hour2 = 0x00;
+[e = . _time 5 -> -> 0 `i `uc ]
+"282
+[; ;userInput.c: 282:                     }
+}
+[e $U 164  ]
+"283
+[; ;userInput.c: 283:                     else if (time.hour2 == 0x03 && time.hour1 == 0x02)
+[e :U 163 ]
+[e $ ! && == -> . _time 5 `i -> 3 `i == -> . _time 4 `i -> 2 `i 165  ]
+"284
+[; ;userInput.c: 284:                     {
+{
+"285
+[; ;userInput.c: 285:                         time.hour1 = 0x00;
+[e = . _time 4 -> -> 0 `i `uc ]
+"286
+[; ;userInput.c: 286:                         time.hour2 = 0x00;
+[e = . _time 5 -> -> 0 `i `uc ]
+"287
+[; ;userInput.c: 287:                     }
+}
+[e $U 166  ]
+"288
+[; ;userInput.c: 288:                     else
+[e :U 165 ]
+"289
+[; ;userInput.c: 289:                     {
+{
+"290
+[; ;userInput.c: 290:                         time.hour2++;
+[e ++ . _time 5 -> -> 1 `i `uc ]
+"291
+[; ;userInput.c: 291:                     }
+}
+[e :U 166 ]
+[e :U 164 ]
+"292
+[; ;userInput.c: 292:                     userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"293
+[; ;userInput.c: 293:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"294
+[; ;userInput.c: 294:                 }
+}
+[e $U 167  ]
+"295
+[; ;userInput.c: 295:                 else if (decrement == 1)
+[e :U 162 ]
+[e $ ! == -> _decrement `i -> 1 `i 168  ]
+"296
+[; ;userInput.c: 296:                 {
+{
+"297
+[; ;userInput.c: 297:                     if (time.hour1 == 0x00 && time.hour2 == 0x00)
+[e $ ! && == -> . _time 4 `i -> 0 `i == -> . _time 5 `i -> 0 `i 169  ]
+"298
+[; ;userInput.c: 298:                     {
+{
+"299
+[; ;userInput.c: 299:                         time.hour1 = 0x02;
+[e = . _time 4 -> -> 2 `i `uc ]
+"300
+[; ;userInput.c: 300:                         time.hour2 = 0x03;
+[e = . _time 5 -> -> 3 `i `uc ]
+"301
+[; ;userInput.c: 301:                     }
+}
+[e $U 170  ]
+"302
+[; ;userInput.c: 302:                     else if (time.hour2 == 0x00)
+[e :U 169 ]
+[e $ ! == -> . _time 5 `i -> 0 `i 171  ]
+"303
+[; ;userInput.c: 303:                     {
+{
+"304
+[; ;userInput.c: 304:                         time.hour2 = 0x09;
+[e = . _time 5 -> -> 9 `i `uc ]
+"305
+[; ;userInput.c: 305:                         if (time.hour1 == 0x00)
+[e $ ! == -> . _time 4 `i -> 0 `i 172  ]
+"306
+[; ;userInput.c: 306:                         {
+{
+"307
+[; ;userInput.c: 307:                             time.hour1 = 0x05;
+[e = . _time 4 -> -> 5 `i `uc ]
+"308
+[; ;userInput.c: 308:                         }
+}
+[e $U 173  ]
+"309
+[; ;userInput.c: 309:                         else
+[e :U 172 ]
+"310
+[; ;userInput.c: 310:                         {
+{
+"311
+[; ;userInput.c: 311:                             time.hour1--;
+[e -- . _time 4 -> -> 1 `i `uc ]
+"312
+[; ;userInput.c: 312:                         }
+}
+[e :U 173 ]
+"313
+[; ;userInput.c: 313:                     }
+}
+[e $U 174  ]
+"314
+[; ;userInput.c: 314:                     else
+[e :U 171 ]
+"315
+[; ;userInput.c: 315:                     {
+{
+"316
+[; ;userInput.c: 316:                         time.hour2--;
+[e -- . _time 5 -> -> 1 `i `uc ]
+"317
+[; ;userInput.c: 317:                     }
+}
+[e :U 174 ]
+[e :U 170 ]
+"318
+[; ;userInput.c: 318:                     userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"319
+[; ;userInput.c: 319:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"320
+[; ;userInput.c: 320:                 }
+}
+[e :U 168 ]
+[e :U 167 ]
+"321
+[; ;userInput.c: 321:                 break;
+[e $U 159  ]
+"324
+[; ;userInput.c: 324:             case 1:
+[e :U 175 ]
+"325
+[; ;userInput.c: 325:                 LCD_writeCmd(0x83);
+[e ( _LCD_writeCmd (1 -> -> 131 `i `uc ]
+"326
+[; ;userInput.c: 326:                 if (increment == 1)
+[e $ ! == -> _increment `i -> 1 `i 176  ]
+"327
+[; ;userInput.c: 327:                 {
+{
+"328
+[; ;userInput.c: 328:                     if (time.min2 == 0x09)
+[e $ ! == -> . _time 3 `i -> 9 `i 177  ]
+"329
+[; ;userInput.c: 329:                     {
+{
+"330
+[; ;userInput.c: 330:                         time.min2 = 0x00;
+[e = . _time 3 -> -> 0 `i `uc ]
+"331
+[; ;userInput.c: 331:                         if (time.min1 == 0x05)
+[e $ ! == -> . _time 2 `i -> 5 `i 178  ]
+"332
+[; ;userInput.c: 332:                         {
+{
+"333
+[; ;userInput.c: 333:                             time.min1 = 0x00;
+[e = . _time 2 -> -> 0 `i `uc ]
+"334
+[; ;userInput.c: 334:                         }
+}
+[e $U 179  ]
+"335
+[; ;userInput.c: 335:                         else
+[e :U 178 ]
+"336
+[; ;userInput.c: 336:                         {
+{
+"337
+[; ;userInput.c: 337:                             time.min1++;
+[e ++ . _time 2 -> -> 1 `i `uc ]
+"338
+[; ;userInput.c: 338:                         }
+}
+[e :U 179 ]
+"339
+[; ;userInput.c: 339:                     }
+}
+[e $U 180  ]
+"340
+[; ;userInput.c: 340:                     else
+[e :U 177 ]
+"341
+[; ;userInput.c: 341:                     {
+{
+"342
+[; ;userInput.c: 342:                         time.min2++;
+[e ++ . _time 3 -> -> 1 `i `uc ]
+"343
+[; ;userInput.c: 343:                     }
+}
+[e :U 180 ]
+"344
+[; ;userInput.c: 344:                     userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"345
+[; ;userInput.c: 345:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"346
+[; ;userInput.c: 346:                 }
+}
+[e $U 181  ]
+"347
+[; ;userInput.c: 347:                 else if (decrement == 1)
+[e :U 176 ]
+[e $ ! == -> _decrement `i -> 1 `i 182  ]
+"348
+[; ;userInput.c: 348:                 {
+{
+"349
+[; ;userInput.c: 349:                    if (time.min1 == 0x00 && time.min2 == 0x00)
+[e $ ! && == -> . _time 2 `i -> 0 `i == -> . _time 3 `i -> 0 `i 183  ]
+"350
+[; ;userInput.c: 350:                     {
+{
+"351
+[; ;userInput.c: 351:                         time.min1 = 0x05;
+[e = . _time 2 -> -> 5 `i `uc ]
+"352
+[; ;userInput.c: 352:                         time.min2 = 0x09;
+[e = . _time 3 -> -> 9 `i `uc ]
+"353
+[; ;userInput.c: 353:                     }
+}
+[e $U 184  ]
+"354
+[; ;userInput.c: 354:                    else if (time.min2 == 0x00)
+[e :U 183 ]
+[e $ ! == -> . _time 3 `i -> 0 `i 185  ]
+"355
+[; ;userInput.c: 355:                    {
+{
+"356
+[; ;userInput.c: 356:                        time.min1--;
+[e -- . _time 2 -> -> 1 `i `uc ]
+"357
+[; ;userInput.c: 357:                        time.min2 = 0x09;
+[e = . _time 3 -> -> 9 `i `uc ]
+"358
+[; ;userInput.c: 358:                    }
+}
+[e $U 186  ]
+"359
+[; ;userInput.c: 359:                    else
+[e :U 185 ]
+"360
+[; ;userInput.c: 360:                    {
+{
+"361
+[; ;userInput.c: 361:                        time.min2--;
+[e -- . _time 3 -> -> 1 `i `uc ]
+"362
+[; ;userInput.c: 362:                    }
+}
+[e :U 186 ]
+[e :U 184 ]
+"363
+[; ;userInput.c: 363:                    userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"364
+[; ;userInput.c: 364:                    decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"365
+[; ;userInput.c: 365:                 }
+}
+[e :U 182 ]
+[e :U 181 ]
+"366
+[; ;userInput.c: 366:                 break;
+[e $U 159  ]
+"369
+[; ;userInput.c: 369:             case 2:
+[e :U 187 ]
+"370
+[; ;userInput.c: 370:                 LCD_writeCmd(0x85);
+[e ( _LCD_writeCmd (1 -> -> 133 `i `uc ]
+"371
+[; ;userInput.c: 371:                 if (increment == 1)
+[e $ ! == -> _increment `i -> 1 `i 188  ]
+"372
+[; ;userInput.c: 372:                 {
+{
+"373
+[; ;userInput.c: 373:                     if (time.sec2 == 0x09)
+[e $ ! == -> . _time 1 `i -> 9 `i 189  ]
+"374
+[; ;userInput.c: 374:                     {
+{
+"375
+[; ;userInput.c: 375:                         time.sec2 = 0x00;
+[e = . _time 1 -> -> 0 `i `uc ]
+"376
+[; ;userInput.c: 376:                         if (time.sec1 == 0x05)
+[e $ ! == -> . _time 0 `i -> 5 `i 190  ]
+"377
+[; ;userInput.c: 377:                         {
+{
+"378
+[; ;userInput.c: 378:                             time.sec1 = 0x00;
+[e = . _time 0 -> -> 0 `i `uc ]
+"379
+[; ;userInput.c: 379:                         }
+}
+[e $U 191  ]
+"380
+[; ;userInput.c: 380:                         else
+[e :U 190 ]
+"381
+[; ;userInput.c: 381:                         {
+{
+"382
+[; ;userInput.c: 382:                             time.sec1++;
+[e ++ . _time 0 -> -> 1 `i `uc ]
+"383
+[; ;userInput.c: 383:                         }
+}
+[e :U 191 ]
+"384
+[; ;userInput.c: 384:                     }
+}
+[e $U 192  ]
+"385
+[; ;userInput.c: 385:                     else
+[e :U 189 ]
+"386
+[; ;userInput.c: 386:                     {
+{
+"387
+[; ;userInput.c: 387:                         time.sec2++;
+[e ++ . _time 1 -> -> 1 `i `uc ]
+"388
+[; ;userInput.c: 388:                     }
+}
+[e :U 192 ]
+"389
+[; ;userInput.c: 389:                     userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"390
+[; ;userInput.c: 390:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"391
+[; ;userInput.c: 391:                 }
+}
+[e $U 193  ]
+"392
+[; ;userInput.c: 392:                 else if (decrement == 1)
+[e :U 188 ]
+[e $ ! == -> _decrement `i -> 1 `i 194  ]
+"393
+[; ;userInput.c: 393:                 {
+{
+"394
+[; ;userInput.c: 394:                    if (time.sec1 == 0x00 && time.sec2 == 0x00)
+[e $ ! && == -> . _time 0 `i -> 0 `i == -> . _time 1 `i -> 0 `i 195  ]
+"395
+[; ;userInput.c: 395:                     {
+{
+"396
+[; ;userInput.c: 396:                         time.sec1 = 0x05;
+[e = . _time 0 -> -> 5 `i `uc ]
+"397
+[; ;userInput.c: 397:                         time.sec2 = 0x09;
+[e = . _time 1 -> -> 9 `i `uc ]
+"398
+[; ;userInput.c: 398:                     }
+}
+[e $U 196  ]
+"399
+[; ;userInput.c: 399:                    else if (time.sec2 == 0x00)
+[e :U 195 ]
+[e $ ! == -> . _time 1 `i -> 0 `i 197  ]
+"400
+[; ;userInput.c: 400:                    {
+{
+"401
+[; ;userInput.c: 401:                        time.sec1--;
+[e -- . _time 0 -> -> 1 `i `uc ]
+"402
+[; ;userInput.c: 402:                        time.sec2 = 0x09;
+[e = . _time 1 -> -> 9 `i `uc ]
+"403
+[; ;userInput.c: 403:                    }
+}
+[e $U 198  ]
+"404
+[; ;userInput.c: 404:                    else
+[e :U 197 ]
+"405
+[; ;userInput.c: 405:                    {
+{
+"406
+[; ;userInput.c: 406:                        time.sec2--;
+[e -- . _time 1 -> -> 1 `i `uc ]
+"407
+[; ;userInput.c: 407:                    }
+}
+[e :U 198 ]
+[e :U 196 ]
+"408
+[; ;userInput.c: 408:                    userInput_displayTime(time);
+[e ( _userInput_displayTime (1 _time ]
+"409
+[; ;userInput.c: 409:                    decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"410
+[; ;userInput.c: 410:                 }
+}
+[e :U 194 ]
+[e :U 193 ]
+"411
+[; ;userInput.c: 411:                 break;
+[e $U 159  ]
+"412
+[; ;userInput.c: 412:         }
+}
+[e $U 159  ]
+[e :U 160 ]
+[e [\ _timeAddressCounter , $ -> 0 `i 161
+ , $ -> 1 `i 175
+ , $ -> 2 `i 187
+ 159 ]
+[e :U 159 ]
+"413
+[; ;userInput.c: 413:     }
+}
+[e :U 143 ]
+[e $U 144  ]
+[e :U 145 ]
+"414
+[; ;userInput.c: 414: }
+[e :UE 142 ]
+}
+"416
+[; ;userInput.c: 416: struct Limits userInput_getTempLimits(struct Limits limit, int day) {
+[v _userInput_getTempLimits `(S98 ~T0 @X0 1 ef2`S98`i ]
+{
+[e :U _userInput_getTempLimits ]
+[v _limit `S98 ~T0 @X0 1 r1 ]
+[v _day `i ~T0 @X0 1 r2 ]
+[f ]
+"419
+[; ;userInput.c: 419:     struct Limits newLimits = limit;
+[v _newLimits `S98 ~T0 @X0 1 a ]
+[e = _newLimits _limit ]
+"421
+[; ;userInput.c: 421:     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"423
+[; ;userInput.c: 423:     LCD_writeCmd(0x91);
+[e ( _LCD_writeCmd (1 -> -> 145 `i `uc ]
+"425
+[; ;userInput.c: 425:     int addressCounter = 0;
+[v _addressCounter `i ~T0 @X0 1 a ]
+[e = _addressCounter -> 0 `i ]
+"426
+[; ;userInput.c: 426:     _Bool buttonPress = 0;
+[v _buttonPress `a ~T0 @X0 1 a ]
+[e = _buttonPress -> -> 0 `i `a ]
+"427
+[; ;userInput.c: 427:     _Bool increment = 0;
+[v _increment `a ~T0 @X0 1 a ]
+[e = _increment -> -> 0 `i `a ]
+"428
+[; ;userInput.c: 428:     _Bool decrement = 0;
+[v _decrement `a ~T0 @X0 1 a ]
+[e = _decrement -> -> 0 `i `a ]
+"434
+[; ;userInput.c: 434:     int exit = 0;
+[v _exit `i ~T0 @X0 1 a ]
+[e = _exit -> 0 `i ]
+"435
+[; ;userInput.c: 435:     while (exit == 0) {
+[e $U 200  ]
+[e :U 201 ]
+{
+"436
+[; ;userInput.c: 436:         int button = matrix_checkButtons();
+[v _button `i ~T0 @X0 1 a ]
+[e = _button ( _matrix_checkButtons ..  ]
+"437
+[; ;userInput.c: 437:         switch (button) {
+[e $U 204  ]
+{
+"439
+[; ;userInput.c: 439:             case 0:
+[e :U 205 ]
+"440
+[; ;userInput.c: 440:                 buttonPress = 0;
+[e = _buttonPress -> -> 0 `i `a ]
+"441
+[; ;userInput.c: 441:                 break;
+[e $U 203  ]
+"442
+[; ;userInput.c: 442:                 break;
+[e $U 203  ]
+"443
+[; ;userInput.c: 443:             case 2:
+[e :U 206 ]
+"445
+[; ;userInput.c: 445:                 if (!buttonPress && addressCounter != 0) addressCounter--;
+[e $ ! && ! != -> _buttonPress `i -> 0 `i != _addressCounter -> 0 `i 207  ]
+[e -- _addressCounter -> 1 `i ]
+[e :U 207 ]
+"446
+[; ;userInput.c: 446:                 buttonPress = 1;
+[e = _buttonPress -> -> 1 `i `a ]
+"447
+[; ;userInput.c: 447:                 break;
+[e $U 203  ]
+"448
+[; ;userInput.c: 448:             case 5:
+[e :U 208 ]
+"449
+[; ;userInput.c: 449:                 decrement = 1;
+[e = _decrement -> -> 1 `i `a ]
+"450
+[; ;userInput.c: 450:                 break;
+[e $U 203  ]
+"451
+[; ;userInput.c: 451:             case 7:
+[e :U 209 ]
+"452
+[; ;userInput.c: 452:                 increment = 1;
+[e = _increment -> -> 1 `i `a ]
+"453
+[; ;userInput.c: 453:                 break;
+[e $U 203  ]
+"454
+[; ;userInput.c: 454:             case 10:
+[e :U 210 ]
+"456
+[; ;userInput.c: 456:                 if (!buttonPress && addressCounter != 4) addressCounter++;
+[e $ ! && ! != -> _buttonPress `i -> 0 `i != _addressCounter -> 4 `i 211  ]
+[e ++ _addressCounter -> 1 `i ]
+[e :U 211 ]
+"457
+[; ;userInput.c: 457:                 buttonPress = 1;
+[e = _buttonPress -> -> 1 `i `a ]
+"458
+[; ;userInput.c: 458:                 break;
+[e $U 203  ]
+"459
+[; ;userInput.c: 459:             case 13:
+[e :U 212 ]
+"460
+[; ;userInput.c: 460:                 return limit;
+[e ) _limit ]
+[e $UE 199  ]
+"461
+[; ;userInput.c: 461:                 break;
+[e $U 203  ]
+"462
+[; ;userInput.c: 462:             case 16:
+[e :U 213 ]
+"463
+[; ;userInput.c: 463:                 return newLimits;
+[e ) _newLimits ]
+[e $UE 199  ]
+"464
+[; ;userInput.c: 464:                 break;
+[e $U 203  ]
+"465
+[; ;userInput.c: 465:         }
+}
+[e $U 203  ]
+[e :U 204 ]
+[e [\ _button , $ -> 0 `i 205
+ , $ -> 2 `i 206
+ , $ -> 5 `i 208
+ , $ -> 7 `i 209
+ , $ -> 10 `i 210
+ , $ -> 13 `i 212
+ , $ -> 16 `i 213
+ 203 ]
+[e :U 203 ]
+"467
+[; ;userInput.c: 467:         switch (addressCounter) {
+[e $U 215  ]
+{
+"468
+[; ;userInput.c: 468:             case 0:
+[e :U 216 ]
+"470
+[; ;userInput.c: 470:                 LCD_writeCmd(0x91);
+[e ( _LCD_writeCmd (1 -> -> 145 `i `uc ]
+"473
+[; ;userInput.c: 473:                 if (increment == 1 && newLimits.lowLimit!= 100) {
+[e $ ! && == -> _increment `i -> 1 `i != . _newLimits 0 -> 100 `i 217  ]
+{
+"474
+[; ;userInput.c: 474:                     newLimits.lowLimit++;
+[e ++ . _newLimits 0 -> 1 `i ]
+"475
+[; ;userInput.c: 475:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"476
+[; ;userInput.c: 476:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"477
+[; ;userInput.c: 477:                 }
+}
+[e $U 218  ]
+"480
+[; ;userInput.c: 480:                 else if (decrement == 1) {
+[e :U 217 ]
+[e $ ! == -> _decrement `i -> 1 `i 219  ]
+{
+"481
+[; ;userInput.c: 481:                     newLimits.lowLimit--;
+[e -- . _newLimits 0 -> 1 `i ]
+"482
+[; ;userInput.c: 482:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"483
+[; ;userInput.c: 483:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"484
+[; ;userInput.c: 484:                 }
+}
+[e :U 219 ]
+[e :U 218 ]
+"485
+[; ;userInput.c: 485:                 break;
+[e $U 214  ]
+"486
+[; ;userInput.c: 486:             case 1:
+[e :U 220 ]
+"488
+[; ;userInput.c: 488:                 LCD_writeCmd(0x96);
+[e ( _LCD_writeCmd (1 -> -> 150 `i `uc ]
+"489
+[; ;userInput.c: 489:                 if (increment == 1) {
+[e $ ! == -> _increment `i -> 1 `i 221  ]
+{
+"490
+[; ;userInput.c: 490:                     newLimits.low++;
+[e ++ . _newLimits 1 -> 1 `i ]
+"491
+[; ;userInput.c: 491:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"492
+[; ;userInput.c: 492:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"493
+[; ;userInput.c: 493:                 } else if (decrement == 1) {
+}
+[e $U 222  ]
+[e :U 221 ]
+[e $ ! == -> _decrement `i -> 1 `i 223  ]
+{
+"494
+[; ;userInput.c: 494:                     newLimits.low--;
+[e -- . _newLimits 1 -> 1 `i ]
+"495
+[; ;userInput.c: 495:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"496
+[; ;userInput.c: 496:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"497
+[; ;userInput.c: 497:                 }
+}
+[e :U 223 ]
+[e :U 222 ]
+"498
+[; ;userInput.c: 498:                 break;
+[e $U 214  ]
+"499
+[; ;userInput.c: 499:             case 2:
+[e :U 224 ]
+"501
+[; ;userInput.c: 501:                 LCD_writeCmd(0x99);
+[e ( _LCD_writeCmd (1 -> -> 153 `i `uc ]
+"502
+[; ;userInput.c: 502:                 if (increment == 1) {
+[e $ ! == -> _increment `i -> 1 `i 225  ]
+{
+"503
+[; ;userInput.c: 503:                     newLimits.high++;
+[e ++ . _newLimits 2 -> 1 `i ]
+"504
+[; ;userInput.c: 504:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"505
+[; ;userInput.c: 505:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"506
+[; ;userInput.c: 506:                 } else if (decrement == 1) {
+}
+[e $U 226  ]
+[e :U 225 ]
+[e $ ! == -> _decrement `i -> 1 `i 227  ]
+{
+"507
+[; ;userInput.c: 507:                     newLimits.high--;
+[e -- . _newLimits 2 -> 1 `i ]
+"508
+[; ;userInput.c: 508:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"509
+[; ;userInput.c: 509:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"510
+[; ;userInput.c: 510:                 }
+}
+[e :U 227 ]
+[e :U 226 ]
+"511
+[; ;userInput.c: 511:                 break;
+[e $U 214  ]
+"512
+[; ;userInput.c: 512:             case 3:
+[e :U 228 ]
+"514
+[; ;userInput.c: 514:                 LCD_writeCmd(0x9E);
+[e ( _LCD_writeCmd (1 -> -> 158 `i `uc ]
+"515
+[; ;userInput.c: 515:                 if (increment == 1) {
+[e $ ! == -> _increment `i -> 1 `i 229  ]
+{
+"516
+[; ;userInput.c: 516:                     newLimits.highLimit++;
+[e ++ . _newLimits 3 -> 1 `i ]
+"517
+[; ;userInput.c: 517:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"518
+[; ;userInput.c: 518:                     increment = 0;
+[e = _increment -> -> 0 `i `a ]
+"519
+[; ;userInput.c: 519:                 } else if (decrement == 1) {
+}
+[e $U 230  ]
+[e :U 229 ]
+[e $ ! == -> _decrement `i -> 1 `i 231  ]
+{
+"520
+[; ;userInput.c: 520:                     newLimits.highLimit--;
+[e -- . _newLimits 3 -> 1 `i ]
+"521
+[; ;userInput.c: 521:                     userInput_displayLimits(newLimits,day);
+[e ( _userInput_displayLimits (2 , _newLimits _day ]
+"522
+[; ;userInput.c: 522:                     decrement = 0;
+[e = _decrement -> -> 0 `i `a ]
+"523
+[; ;userInput.c: 523:                 }
+}
+[e :U 231 ]
+[e :U 230 ]
+"524
+[; ;userInput.c: 524:                 break;
+[e $U 214  ]
+"525
+[; ;userInput.c: 525:         }
+}
+[e $U 214  ]
+[e :U 215 ]
+[e [\ _addressCounter , $ -> 0 `i 216
+ , $ -> 1 `i 220
+ , $ -> 2 `i 224
+ , $ -> 3 `i 228
+ 214 ]
+[e :U 214 ]
+"526
+[; ;userInput.c: 526:     }
+}
+[e :U 200 ]
+"435
+[; ;userInput.c: 435:     while (exit == 0) {
+[e $ == _exit -> 0 `i 201  ]
+[e :U 202 ]
+"527
+[; ;userInput.c: 527: }
+[e :UE 199 ]
+}
+"529
+[; ;userInput.c: 529: void userInput_displayLimits(struct Limits limits, int day) {
+[v _userInput_displayLimits `(v ~T0 @X0 1 ef2`S98`i ]
+{
+[e :U _userInput_displayLimits ]
+[v _limits `S98 ~T0 @X0 1 r1 ]
+[v _day `i ~T0 @X0 1 r2 ]
+[f ]
+"530
+[; ;userInput.c: 530:     LCD_init();
+[e ( _LCD_init ..  ]
+"531
+[; ;userInput.c: 531:     LCD_clear();
+[e ( _LCD_clear ..  ]
+"532
+[; ;userInput.c: 532:     LCD_writeCmd(0x81);
+[e ( _LCD_writeCmd (1 -> -> 129 `i `uc ]
+"533
+[; ;userInput.c: 533:     if (day) LCD_write("DAY LIMITS", 10);
+[e $ ! != _day -> 0 `i 233  ]
+[e ( _LCD_write (2 , :s 1C -> -> 10 `i `uc ]
+[e $U 234  ]
+"534
+[; ;userInput.c: 534:     else LCD_write("NIGHT LIMITS", 12);
+[e :U 233 ]
+[e ( _LCD_write (2 , :s 2C -> -> 12 `i `uc ]
+[e :U 234 ]
+"535
+[; ;userInput.c: 535:     LCD_secondLine();
+[e ( _LCD_secondLine ..  ]
+"538
+[; ;userInput.c: 538:     char LL0 = (limits.lowLimit / 100) % 10;
+[v _LL0 `uc ~T0 @X0 1 a ]
+[e = _LL0 -> % / . _limits 0 -> 100 `i -> 10 `i `uc ]
+"539
+[; ;userInput.c: 539:     char LL1 = (limits.lowLimit / 10) % 10;
+[v _LL1 `uc ~T0 @X0 1 a ]
+[e = _LL1 -> % / . _limits 0 -> 10 `i -> 10 `i `uc ]
+"540
+[; ;userInput.c: 540:     char LL2 = (limits.lowLimit % 10);
+[v _LL2 `uc ~T0 @X0 1 a ]
+[e = _LL2 -> % . _limits 0 -> 10 `i `uc ]
+"542
+[; ;userInput.c: 542:     LCD_writeChar(' ');
+[e ( _LCD_writeChar (1 -> -> 32 `ui `uc ]
+"543
+[; ;userInput.c: 543:     LCD_writeChar(LL0 + '0');
+[e ( _LCD_writeChar (1 -> + -> _LL0 `ui -> 48 `ui `uc ]
+"544
+[; ;userInput.c: 544:     LCD_writeChar(LL1 + '0');
+[e ( _LCD_writeChar (1 -> + -> _LL1 `ui -> 48 `ui `uc ]
+"545
+[; ;userInput.c: 545:     LCD_writeChar('.');
+[e ( _LCD_writeChar (1 -> -> 46 `ui `uc ]
+"546
+[; ;userInput.c: 546:     LCD_writeChar(LL2 + '0');
+[e ( _LCD_writeChar (1 -> + -> _LL2 `ui -> 48 `ui `uc ]
+"549
+[; ;userInput.c: 549:     LCD_write("      ", 6);
+[e ( _LCD_write (2 , :s 3C -> -> 6 `i `uc ]
+"550
+[; ;userInput.c: 550:     char L0 = (limits.low / 100) % 10;
+[v _L0 `uc ~T0 @X0 1 a ]
+[e = _L0 -> % / . _limits 1 -> 100 `i -> 10 `i `uc ]
+"551
+[; ;userInput.c: 551:     char L1 = (limits.low / 10) % 10;
+[v _L1 `uc ~T0 @X0 1 a ]
+[e = _L1 -> % / . _limits 1 -> 10 `i -> 10 `i `uc ]
+"552
+[; ;userInput.c: 552:     char L2 = (limits.low % 10);
+[v _L2 `uc ~T0 @X0 1 a ]
+[e = _L2 -> % . _limits 1 -> 10 `i `uc ]
+"554
+[; ;userInput.c: 554:     LCD_writeChar(L0 + '0');
+[e ( _LCD_writeChar (1 -> + -> _L0 `ui -> 48 `ui `uc ]
+"555
+[; ;userInput.c: 555:     LCD_writeChar(L1 + '0');
+[e ( _LCD_writeChar (1 -> + -> _L1 `ui -> 48 `ui `uc ]
+"556
+[; ;userInput.c: 556:     LCD_writeChar('.');
+[e ( _LCD_writeChar (1 -> -> 46 `ui `uc ]
+"557
+[; ;userInput.c: 557:     LCD_writeChar(L2 + '0');
+[e ( _LCD_writeChar (1 -> + -> _L2 `ui -> 48 `ui `uc ]
+"560
+[; ;userInput.c: 560:     LCD_fourthLine();
+[e ( _LCD_fourthLine ..  ]
+"561
+[; ;userInput.c: 561:     char H0 = (limits.high / 100) % 10;
+[v _H0 `uc ~T0 @X0 1 a ]
+[e = _H0 -> % / . _limits 2 -> 100 `i -> 10 `i `uc ]
+"562
+[; ;userInput.c: 562:     char H1 = (limits.high / 10) % 10;
+[v _H1 `uc ~T0 @X0 1 a ]
+[e = _H1 -> % / . _limits 2 -> 10 `i -> 10 `i `uc ]
+"563
+[; ;userInput.c: 563:     char H2 = (limits.high % 10);
+[v _H2 `uc ~T0 @X0 1 a ]
+[e = _H2 -> % . _limits 2 -> 10 `i `uc ]
+"565
+[; ;userInput.c: 565:     LCD_writeChar(' ');
+[e ( _LCD_writeChar (1 -> -> 32 `ui `uc ]
+"566
+[; ;userInput.c: 566:     LCD_writeChar(H0 + '0');
+[e ( _LCD_writeChar (1 -> + -> _H0 `ui -> 48 `ui `uc ]
+"567
+[; ;userInput.c: 567:     LCD_writeChar(H1 + '0');
+[e ( _LCD_writeChar (1 -> + -> _H1 `ui -> 48 `ui `uc ]
+"568
+[; ;userInput.c: 568:     LCD_writeChar('.');
+[e ( _LCD_writeChar (1 -> -> 46 `ui `uc ]
+"569
+[; ;userInput.c: 569:     LCD_writeChar(H2 + '0');
+[e ( _LCD_writeChar (1 -> + -> _H2 `ui -> 48 `ui `uc ]
+"572
+[; ;userInput.c: 572:     LCD_write("      ", 6);
+[e ( _LCD_write (2 , :s 4C -> -> 6 `i `uc ]
+"573
+[; ;userInput.c: 573:     char HL0 = (limits.highLimit / 100) % 10;
+[v _HL0 `uc ~T0 @X0 1 a ]
+[e = _HL0 -> % / . _limits 3 -> 100 `i -> 10 `i `uc ]
+"574
+[; ;userInput.c: 574:     char HL1 = (limits.highLimit / 10) % 10;
+[v _HL1 `uc ~T0 @X0 1 a ]
+[e = _HL1 -> % / . _limits 3 -> 10 `i -> 10 `i `uc ]
+"575
+[; ;userInput.c: 575:     char HL2 = (limits.highLimit % 10);
+[v _HL2 `uc ~T0 @X0 1 a ]
+[e = _HL2 -> % . _limits 3 -> 10 `i `uc ]
+"577
+[; ;userInput.c: 577:     LCD_writeChar(HL0 + '0');
+[e ( _LCD_writeChar (1 -> + -> _HL0 `ui -> 48 `ui `uc ]
+"578
+[; ;userInput.c: 578:     LCD_writeChar(HL1 + '0');
+[e ( _LCD_writeChar (1 -> + -> _HL1 `ui -> 48 `ui `uc ]
+"579
+[; ;userInput.c: 579:     LCD_writeChar('.');
+[e ( _LCD_writeChar (1 -> -> 46 `ui `uc ]
+"580
+[; ;userInput.c: 580:     LCD_writeChar(HL2 + '0');
+[e ( _LCD_writeChar (1 -> + -> _HL2 `ui -> 48 `ui `uc ]
+"584
+[; ;userInput.c: 584: }
+[e :UE 232 ]
+}
+"586
+[; ;userInput.c: 586: void userInput_displayTime (struct Time time)
+[v _userInput_displayTime `(v ~T0 @X0 1 ef1`S97 ]
+"587
+[; ;userInput.c: 587: {
+{
+[e :U _userInput_displayTime ]
+"586
+[; ;userInput.c: 586: void userInput_displayTime (struct Time time)
+[v _time `S97 ~T0 @X0 1 r1 ]
+"587
+[; ;userInput.c: 587: {
+[f ]
+"588
+[; ;userInput.c: 588:     LCD_init();
+[e ( _LCD_init ..  ]
+"589
+[; ;userInput.c: 589:     LCD_clear();
+[e ( _LCD_clear ..  ]
+"591
+[; ;userInput.c: 591:     LCD_writeCmd(0x82);
+[e ( _LCD_writeCmd (1 -> -> 130 `i `uc ]
+"592
+[; ;userInput.c: 592:     LCD_writeChar(time.hour1 + 48);
+[e ( _LCD_writeChar (1 -> + -> . _time 4 `i -> 48 `i `uc ]
+"593
+[; ;userInput.c: 593:     LCD_writeChar(time.hour2 + 48);
+[e ( _LCD_writeChar (1 -> + -> . _time 5 `i -> 48 `i `uc ]
+"594
+[; ;userInput.c: 594:     LCD_writeChar(':');
+[e ( _LCD_writeChar (1 -> -> 58 `ui `uc ]
+"595
+[; ;userInput.c: 595:     LCD_writeChar(' ');
+[e ( _LCD_writeChar (1 -> -> 32 `ui `uc ]
+"596
+[; ;userInput.c: 596:     LCD_writeChar(time.min1 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _time 2 `ui -> 48 `ui `uc ]
+"597
+[; ;userInput.c: 597:     LCD_writeChar(time.min2 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _time 3 `ui -> 48 `ui `uc ]
+"598
+[; ;userInput.c: 598:     LCD_writeChar(':');
+[e ( _LCD_writeChar (1 -> -> 58 `ui `uc ]
+"599
+[; ;userInput.c: 599:     LCD_writeChar(time.sec1 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _time 0 `ui -> 48 `ui `uc ]
+"600
+[; ;userInput.c: 600:     LCD_writeChar(time.sec2 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _time 1 `ui -> 48 `ui `uc ]
+"601
+[; ;userInput.c: 601: }
+[e :UE 235 ]
+}
+"602
+[; ;userInput.c: 602: void userInput_displayDate (struct Time date) {
+[v _userInput_displayDate `(v ~T0 @X0 1 ef1`S97 ]
+{
+[e :U _userInput_displayDate ]
+[v _date `S97 ~T0 @X0 1 r1 ]
+[f ]
+"603
+[; ;userInput.c: 603:     LCD_init();
+[e ( _LCD_init ..  ]
+"604
+[; ;userInput.c: 604:     LCD_clear();
+[e ( _LCD_clear ..  ]
+"605
+[; ;userInput.c: 605:     LCD_writeCmd(0x82);
+[e ( _LCD_writeCmd (1 -> -> 130 `i `uc ]
+"606
+[; ;userInput.c: 606:     LCD_writeChar(date.day1 + 48);
+[e ( _LCD_writeChar (1 -> + -> . _date 6 `i -> 48 `i `uc ]
+"607
+[; ;userInput.c: 607:     LCD_writeChar(date.day2 + 48);
+[e ( _LCD_writeChar (1 -> + -> . _date 7 `i -> 48 `i `uc ]
+"608
+[; ;userInput.c: 608:     LCD_writeChar('/');
+[e ( _LCD_writeChar (1 -> -> 47 `ui `uc ]
+"609
+[; ;userInput.c: 609:     LCD_writeChar(date.month1 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _date 8 `ui -> 48 `ui `uc ]
+"610
+[; ;userInput.c: 610:     LCD_writeChar(date.month2 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _date 9 `ui -> 48 `ui `uc ]
+"611
+[; ;userInput.c: 611:     LCD_writeChar('/');
+[e ( _LCD_writeChar (1 -> -> 47 `ui `uc ]
+"612
+[; ;userInput.c: 612:     LCD_writeChar(date.year1 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _date 12 `ui -> 48 `ui `uc ]
+"613
+[; ;userInput.c: 613:     LCD_writeChar(date.year2 + '0');
+[e ( _LCD_writeChar (1 -> + -> . _date 13 `ui -> 48 `ui `uc ]
+"614
+[; ;userInput.c: 614: }
+[e :UE 236 ]
+}
+[a 1C 68 65 89 32 76 73 77 73 84 83 0 ]
+[a 2C 78 73 71 72 84 32 76 73 77 73 84 83 0 ]
+[a 3C 32 32 32 32 32 32 0 ]
+[a 4C 32 32 32 32 32 32 0 ]
